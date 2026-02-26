@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "PlentyOfFishInTheSea.slnx"
+    "dotnet.defaultSolution": "Plenty-Of-Fish-In-The-Sea.slnx"
 }
