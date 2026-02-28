@@ -6,7 +6,7 @@ public class FishRacingFish : MonoBehaviour
 
     Rigidbody2D fish;
     
-
+    public float movespeed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,11 +17,11 @@ public class FishRacingFish : MonoBehaviour
     void Update()
     {
         float horizontal = Input.GetAxis("Horizontal"); 
-        float vertical = Input.GetAxis("Vertical");
+        
 
-        Vector3 movement = new Vector3(horizontal, vertical, 0).normalized;
+        Vector3 movement = new Vector3(horizontal, 0).normalized;
 
-        transform.Translate(movement * (10 * Time.deltaTime));
+        transform.Translate(movement * (movespeed * Time.deltaTime));
         
     }
 }
