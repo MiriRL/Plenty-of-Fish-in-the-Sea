@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartScreenController : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class StartScreenController : MonoBehaviour
 
     public void onStartClick()
     {
-        Debug.Log("Start game clicked");
+        Debug.Log("Starting game");
+        SceneManager.LoadScene("HomeScreen", LoadSceneMode.Single);
     }
 }
