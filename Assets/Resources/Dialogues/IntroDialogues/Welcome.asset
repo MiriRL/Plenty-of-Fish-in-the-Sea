@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Welcome
   m_EditorClassIdentifier: Assembly-CSharp::Sentence
   text: Welcome! This dialogue test is about to go swimmingly (trust).
-  nextSentence: {fileID: 11400000, guid: 04280086523e5463793f651ae06de43a, type: 2}
+  nextSentence: {fileID: 11400000, guid: 5f3057e285d5742aa93173c5fcc3580a, type: 2}
   options: []

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2b343b152a8a430eb3bda397fcbc60f, type: 3}
-  m_Name: NewDialogue
+  m_Name: TestDialogue
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTree
   characterName: Bug
   startingSentence: {fileID: 11400000, guid: 28171d02649014d7187a63b807394834, type: 2}

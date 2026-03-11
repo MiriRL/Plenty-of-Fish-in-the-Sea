@@ -1,3 +1,8 @@
+/*
+Base code file taken from in-class example, written by Bret Jackson.
+Edited for this project.
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +11,7 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI dialogueUIText;
+    public TextMeshProUGUI characterNameText;
     public Canvas dialogueCanvas;
     public GameObject continueButton;
     public GameObject optionPanel;
@@ -18,6 +24,7 @@ public class DialogueManager : MonoBehaviour
         dialogue = dialogueTree;
         currentSentence = dialogue.startingSentence;
         dialogueCanvas.enabled = true;
+        characterNameText.text = dialogueTree.characterName;
         DisplaySentence();
     }
 
@@ -33,7 +40,7 @@ public class DialogueManager : MonoBehaviour
         }
         HideOptions();
         string sentence = currentSentence.text;
-        //dialogueUIText.text = sentence;
+
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
@@ -42,6 +49,7 @@ public class DialogueManager : MonoBehaviour
         dialogueUIText.text = "";
         foreach(char letter in sentence.ToCharArray()){
             dialogueUIText.text += letter;
+
             yield return new WaitForSeconds(0.05f);
         }
 
@@ -59,6 +67,10 @@ public class DialogueManager : MonoBehaviour
                 optionsUI[i].text = currentSentence.options[i].text;
                 optionsUI[i].transform.parent.gameObject.SetActive(true);
             }
+        }
+        else
+        {
+            Debug.Log("Too many options!");
         }
         optionPanel.SetActive(true);
     }

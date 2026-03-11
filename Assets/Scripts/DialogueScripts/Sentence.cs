@@ -1,3 +1,8 @@
+/*
+Base code file taken from in-class example, written by Bret Jackson.
+Edited for this project.
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +10,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="NewSentence", menuName ="Dialogue/Sentence")]
 public class Sentence : ScriptableObject
 {
+    public string id;
     [TextArea(3, 10)]
     public string text = "text";
     public Sentence nextSentence;
@@ -19,11 +25,11 @@ public class Sentence : ScriptableObject
             return true;
         }
     }
-
 }
 
 [System.Serializable]
-public class Choice{
+public class Choice {
+    public string id;
     [TextArea(3, 10)]
     public string text;
     public Sentence nextSentence;
