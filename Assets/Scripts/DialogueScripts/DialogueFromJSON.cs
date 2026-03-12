@@ -15,7 +15,7 @@ public class DialogueFromJSON : ScriptableObject
     private SentenceWrapper wrapper;
     
     // Takes the character name and the local path of the JSON file relative to the Dialogues folder in Resources.
-    public void OnLoadDialogueTree(string characterName, string JSONFileName)
+    public void LoadDialogueTree(string characterName, string JSONFileName)
     {
         fileName = JSONFileName;
         
@@ -60,18 +60,17 @@ public class DialogueFromJSON : ScriptableObject
 
         string jsonText = json.text;
         wrapper = JsonUtility.FromJson<SentenceWrapper>(jsonText);
+        PrintWrapperAsIds();
 
-        // foreach (JSONSentence jsonSentence in wrapper.sentences)
-        // {
-        //     MakeSentence(jsonSentence.id);
-        // }
         // Start with the first sentence.
+        // Debug.Log("Root id: " + wrapper.sentences[0].id);
         MakeSentence(wrapper.sentences[0].id);
     }
 
     // A recursive function which follows the dialogue tree down and builds the tree
     private Sentence MakeSentence(string sentenceID)
     {
+        // Debug.Log("Current id: " + sentenceID);
         // Check if the sentence has already been made
         if (createdIds.Contains(sentenceID))
         {
@@ -94,10 +93,19 @@ public class DialogueFromJSON : ScriptableObject
         sentences.Add(newSentence);
         createdIds.Add(newSentence.id);
 
-        // Add in the options or next sentence
+        // If it's a leaf node, return and don't recurse
+        if (jsonSentence.options.Count == 0 && jsonSentence.idNextSentence == "")
+        {
+            return GetSentenceFromId(sentenceID);
+        }
+
+        // Otherwise add in the options or next sentence and recurse over them
         if (jsonSentence.options.Count == 0)
         {
-            newSentence.nextSentence = MakeSentence(jsonSentence.idNextSentence);
+            if (!createdIds.Contains(jsonSentence.idNextSentence)) 
+            {
+                newSentence.nextSentence = MakeSentence(jsonSentence.idNextSentence);
+            }
         } 
         else
         {
@@ -106,7 +114,11 @@ public class DialogueFromJSON : ScriptableObject
                 Choice newChoice = new Choice();
                 newChoice.id = option.id;
                 newChoice.text = option.text;
-                newChoice.nextSentence = MakeSentence(option.idNextSentence);
+                if (!createdIds.Contains(option.idNextSentence)) 
+                {
+                    newChoice.nextSentence = MakeSentence(option.idNextSentence);
+                }
+                newSentence.options.Add(newChoice);
             }
         }
         
@@ -139,12 +151,12 @@ public class DialogueFromJSON : ScriptableObject
 
         if (sentence.HasOptions())
         {
-            Debug.Log(sentence.id + " has options");
+            // Debug.Log(sentence.id + " has options");
             JSONSentence writableSentence = MakeJSONSentenceFromSentence(sentence);
             foreach (Choice option in sentence.options)
             {
                 writableSentence.options.Add(MakeJSONChoiceFromChoice(option));
-                Debug.Log("Option added: " + option.id);
+                // Debug.Log("Option added: " + option.id);
 
                 if (!createdIds.Contains(option.nextSentence.id))
                 {
