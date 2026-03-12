@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
   m_Name: OptionsTest
   m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  id: B1
   text: Here are some options. Choose one!
   nextSentence: {fileID: 0}
   options:
-  - text: Cool option
+  - id: Bc1
+    text: Cool option
     nextSentence: {fileID: 11400000, guid: 04280086523e5463793f651ae06de43a, type: 2}
     onOptionSelected: {fileID: 0}
-  - text: Cooler option
+  - id: Bc2
+    text: Cooler option
     nextSentence: {fileID: 11400000, guid: 04280086523e5463793f651ae06de43a, type: 2}
     onOptionSelected: {fileID: 0}

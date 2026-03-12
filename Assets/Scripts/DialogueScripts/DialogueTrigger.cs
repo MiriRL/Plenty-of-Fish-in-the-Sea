@@ -1,3 +1,7 @@
+/*
+Base code file taken from in-class example, written by Bret Jackson.
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

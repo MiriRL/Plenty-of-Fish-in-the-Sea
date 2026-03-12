@@ -1,0 +1,33 @@
+{
+    "sentences": [
+        {
+            "id": "A1",
+            "text": "Welcome! This dialogue test is about to go swimmingly (trust).",
+            "idNextSentence": "B1",
+            "options": []
+        },
+        {
+            "id": "D1",
+            "text": "You made it! Yay!",
+            "idNextSentence": "",
+            "options": []
+        },
+        {
+            "id": "B1",
+            "text": "Here are some options. Choose one!",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Bc1",
+                    "text": "Cool option",
+                    "idNextSentence": "D1"
+                },
+                {
+                    "id": "Bc2",
+                    "text": "Cooler option",
+                    "idNextSentence": "D1"
+                }
+            ]
+        }
+    ]
+}

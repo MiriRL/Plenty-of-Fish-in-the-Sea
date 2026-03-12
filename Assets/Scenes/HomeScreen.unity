@@ -462,6 +462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HomeScreenController
   dialogueCanvas: {fileID: 1391784741}
   dialogueTree: {fileID: 11400000, guid: 8aa261ddda7854cd19241ec1a3069392, type: 2}
+  writeTreeToJSON: 1
 --- !u!4 &1565733670
 Transform:
   m_ObjectHideFlags: 0

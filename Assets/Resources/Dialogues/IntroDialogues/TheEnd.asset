@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
   m_Name: TheEnd
   m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  id: D1
   text: You made it! Yay!
   nextSentence: {fileID: 0}
   options: []
