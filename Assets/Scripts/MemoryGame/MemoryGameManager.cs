@@ -14,7 +14,7 @@ public class MemoryGameManager : MonoBehaviour
         pendingCards = new List<MemoryGameCard>();
         matchedCards = new List<MemoryGameCard>();
         // shuffle the cards
-        System.Array.Sort(cardList, RandomSort);
+        cardList.Sort(RandomSort);
     }
 
     // Update is called once per frame
