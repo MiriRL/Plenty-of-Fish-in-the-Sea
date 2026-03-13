@@ -18,7 +18,7 @@ MonoBehaviour:
   options:
   - id: Bc1
     text: Cool option
-    nextSentence: {fileID: 11400000, guid: 04280086523e5463793f651ae06de43a, type: 2}
+    nextSentence: {fileID: 11400000, guid: 315ef42bf7e8040a6bf7bb12134ae6c6, type: 2}
     onOptionSelected: {fileID: 0}
   - id: Bc2
     text: Cooler option

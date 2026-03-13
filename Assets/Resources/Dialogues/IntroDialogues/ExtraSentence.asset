@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ExtraSentence
   m_EditorClassIdentifier: Assembly-CSharp::Sentence
   id: 
-  text: text
-  nextSentence: {fileID: 0}
+  text: Wow that's cool
+  nextSentence: {fileID: 11400000, guid: 04280086523e5463793f651ae06de43a, type: 2}
   options: []
