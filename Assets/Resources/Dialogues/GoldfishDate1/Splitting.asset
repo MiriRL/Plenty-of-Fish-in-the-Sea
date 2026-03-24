@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
+  m_Name: Splitting
+  m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  id: Splitting
+  text: Paid? I thought we were splitting the gill!
+  nextSentence: {fileID: 0}
+  options:
+  - id: Splitting1
+    text: Oh hell no, I deserve the world!
+    nextSentence: {fileID: 11400000, guid: a97d09d821c0a4b25bbda70fe2f76f6e, type: 2}
+    onOptionSelected: {fileID: 0}
+  - id: Splitting2
+    text: Oh, go fish yourself!
+    nextSentence: {fileID: 11400000, guid: 101890a00262a4ff5915daf89a8592f4, type: 2}
+    onOptionSelected: {fileID: 0}

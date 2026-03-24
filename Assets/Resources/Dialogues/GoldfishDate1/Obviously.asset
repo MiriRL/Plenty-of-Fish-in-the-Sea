@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
+  m_Name: Obviously
+  m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  id: Obviously
+  text: Well, obviously, this is just the first date, haha! We have to get to know
+    each other!
+  nextSentence: {fileID: 0}
+  options:
+  - id: Obviously1
+    text: Haha, of course, I was just joking! I'd love to get to know you!
+    nextSentence: {fileID: 11400000, guid: 450f6b35a00ad40b9b9139c1e8dec8e1, type: 2}
+    onOptionSelected: {fileID: 0}
+  - id: Obviously2
+    text: Yeah, I suppose.
+    nextSentence: {fileID: 11400000, guid: 9f8c85474ad0b453fa6268608eaf4cc6, type: 2}
+    onOptionSelected: {fileID: 0}
+  - id: Obviously3
+    text: No we don't. I don't want to.
+    nextSentence: {fileID: 11400000, guid: 1a492559bf8fb470ea65eaeb28caedcc, type: 2}
+    onOptionSelected: {fileID: 0}
