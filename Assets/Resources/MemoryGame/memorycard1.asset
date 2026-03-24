@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e723f7663cb7d1047bd2cb61f52aed49, type: 3}
   m_Name: memorycard1
   m_EditorClassIdentifier: Assembly-CSharp::MemoryGameCard
-  text: 
-  match: {fileID: 0}
+  text: Favorite Color
+  match: {fileID: 11400000, guid: 8bd0d91f0c428bc43bb3f4bb0dc90732, type: 2}
   face: {fileID: 0}
-  back: {fileID: 0}
+  back: {fileID: -2895157278119961449, guid: 9459a33c83dfc6e419d032f96fa08196, type: 3}
   flippable: 0
