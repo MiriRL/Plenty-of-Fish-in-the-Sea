@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
+  m_Name: Important
+  m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  id: Important
+  text: Even the memory game? Because it's really important to me that you like the
+    memory game.
+  nextSentence: {fileID: 0}
+  options:
+  - id: Important1
+    text: Ooh, I'd play the memory game!
+    nextSentence: {fileID: 11400000, guid: 113f5de3784124187ae2ad37cce5ed9f, type: 2}
+    onOptionSelected: {fileID: 0}
+  - id: Important2
+    text: Even the memory game.
+    nextSentence: {fileID: 11400000, guid: 7e4a6580474ef49c2af25f821024f687, type: 2}
+    onOptionSelected: {fileID: 0}

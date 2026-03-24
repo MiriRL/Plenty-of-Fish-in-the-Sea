@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
+  m_Name: Memory Rules
+  m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  id: MemoryRules
+  text: It's pretty simple! You just pick two cards, and if they match, you take
+    the cards out! So it's best to try and get all of the cards out in as few moves
+    as possible, so make sure you remember where they are! Does that sound fun?
+  nextSentence: {fileID: 0}
+  options:
+  - id: MemoryRules1
+    text: You bet it does!
+    nextSentence: {fileID: 11400000, guid: 37a7d619a7d7e4f4fa2a48078b0c4b58, type: 2}
+    onOptionSelected: {fileID: 0}
+  - id: MemoryRules2
+    text: Oh God no, that sounds terrible!
+    nextSentence: {fileID: 11400000, guid: 7e4a6580474ef49c2af25f821024f687, type: 2}
+    onOptionSelected: {fileID: 0}

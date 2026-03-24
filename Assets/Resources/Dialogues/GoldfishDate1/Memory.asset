@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
+  m_Name: Memory
+  m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  id: Memory
+  text: I also love everything! Swimming is always super fun, and so is fish basketball,
+    but my favorite thing has got to be the memory game! Do you want to play the
+    memory game?
+  nextSentence: {fileID: 0}
+  options:
+  - id: Memory1
+    text: Ooh, I'd love to!
+    nextSentence: {fileID: 11400000, guid: 37a7d619a7d7e4f4fa2a48078b0c4b58, type: 2}
+    onOptionSelected: {fileID: 0}
+  - id: Memory2
+    text: What's the memory game?
+    nextSentence: {fileID: 11400000, guid: 8c5287fd0bb1e4fcb9dabe4089eb56d6, type: 2}
+    onOptionSelected: {fileID: 0}
+  - id: Memory3
+    text: Oh hell no, I hate that game!
+    nextSentence: {fileID: 11400000, guid: 7e4a6580474ef49c2af25f821024f687, type: 2}
+    onOptionSelected: {fileID: 0}
