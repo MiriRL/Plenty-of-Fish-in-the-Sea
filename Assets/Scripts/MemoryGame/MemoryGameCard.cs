@@ -7,6 +7,8 @@ public class MemoryGameCard : ScriptableObject
   [SerializeField] string text; 
   //the matching card to this card
   [SerializeField] MemoryGameCard match;
+  [SerializeField] Sprite face;
+  [SerializeField] Sprite back;
   public bool flippable;
 
   //Store card faces in a List - what type would the card faces be?
