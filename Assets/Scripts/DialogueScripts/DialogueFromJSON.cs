@@ -20,7 +20,7 @@ public class DialogueFromJSON : ScriptableObject
         fileName = JSONFileName;
         
         dialogueTree = ScriptableObject.CreateInstance<DialogueTree>();
-        dialogueTree.characterName = characterName;
+        dialogueTree.character.characterName = characterName;
 
         sentences = new List<Sentence>();
         createdIds = new List<string>();
@@ -114,6 +114,7 @@ public class DialogueFromJSON : ScriptableObject
                 Choice newChoice = new Choice();
                 newChoice.id = option.id;
                 newChoice.text = option.text;
+                newChoice.score = option.score;
                 if (!createdIds.Contains(option.idNextSentence)) 
                 {
                     newChoice.nextSentence = MakeSentence(option.idNextSentence);
@@ -206,6 +207,7 @@ public class DialogueFromJSON : ScriptableObject
         JSONChoice newOption = new JSONChoice();
         newOption.id = option.id;
         newOption.text = option.text;
+        newOption.score = option.score;
         if (option.nextSentence != null) 
         { 
             newOption.idNextSentence = option.nextSentence.id; 
@@ -264,6 +266,7 @@ public class JSONChoice
     public string id;
     public string text;
     public string idNextSentence;
+    public int score;
     
 }
 

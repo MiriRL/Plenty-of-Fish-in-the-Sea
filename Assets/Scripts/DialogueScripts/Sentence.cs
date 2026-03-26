@@ -33,6 +33,7 @@ public class Choice {
     [TextArea(3, 10)]
     public string text;
     public Sentence nextSentence;
+    public int score;
     public GameEvent onOptionSelected;
 
 }

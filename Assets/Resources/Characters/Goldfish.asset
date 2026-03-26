@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20ea9b829782c40ca9fdd7805af6d482, type: 3}
+  m_Name: Goldfish
+  m_EditorClassIdentifier: Assembly-CSharp::Character
+  characterName: Goldfish
+  hearts: 0
+  emotions:
+  - emotionName: crying
+    emotionSprite: {fileID: 5900121124419885490, guid: b8bb50a6f50c848a4bd705235f26f2da, type: 3}
+  - emotionName: dead
+    emotionSprite: {fileID: 7027438615597344673, guid: 3c890ac292a144f7a9cfbb13d91b9887, type: 3}
+  - emotionName: despair
+    emotionSprite: {fileID: 8458587150963331933, guid: 7e4033a20192547b393867d19ab8fe1a, type: 3}
+  - emotionName: excited
+    emotionSprite: {fileID: -4028108236679445655, guid: f3596300bd48c48b0aa9457c0c8fc8c4, type: 3}
+  - emotionName: happy
+    emotionSprite: {fileID: -962012111571392253, guid: 40199b7ca5ecb46eca921a72e724504b, type: 3}
+  - emotionName: neutral
+    emotionSprite: {fileID: -1503497251555210946, guid: b189ee24e6f76430d9d5ae43fe161c9d, type: 3}
+  - emotionName: sad
+    emotionSprite: {fileID: 2358552735186354968, guid: af9b076c9d3f249ffbee20818c377c4b, type: 3}
+  - emotionName: talking1
+    emotionSprite: {fileID: -8121432249065234352, guid: 90225d252392d4f608dfae3b99e3e1eb, type: 3}
+  - emotionName: talking2
+    emotionSprite: {fileID: -5282495336281919194, guid: db743ae571bd740469d3e9b3b1834c41, type: 3}
+  dialogues:
+  - {fileID: 11400000, guid: 03a05e95d3eb84697a90ab16840ff138, type: 2}

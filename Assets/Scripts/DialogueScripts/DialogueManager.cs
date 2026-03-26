@@ -24,7 +24,7 @@ public class DialogueManager : MonoBehaviour
         dialogue = dialogueTree;
         currentSentence = dialogue.startingSentence;
         dialogueCanvas.enabled = true;
-        characterNameText.text = dialogueTree.characterName;
+        characterNameText.text = dialogueTree.character.characterName;
         DisplaySentence();
     }
 

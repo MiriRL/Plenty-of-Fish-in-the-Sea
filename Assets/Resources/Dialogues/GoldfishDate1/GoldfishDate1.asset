@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b343b152a8a430eb3bda397fcbc60f, type: 3}
   m_Name: GoldfishDate1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTree
-  characterName: Goldfish
+  character: {fileID: 11400000, guid: a2a0b282e5eca46d989af9aab2002585, type: 2}
   startingSentence: {fileID: 11400000, guid: 3c87c717fc2024b138ff804c4e0316bd, type: 2}
+  requiredHearts: 0

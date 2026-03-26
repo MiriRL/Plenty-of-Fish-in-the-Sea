@@ -9,7 +9,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="NewDialogue", menuName ="Dialogue/Dialogue Tree")]
 public class DialogueTree : ScriptableObject
 {
-    [Tooltip("The name of the character speaking")]
-    public string characterName;
+    public Character character;
     public Sentence startingSentence;
+    [Tooltip("The number of hearts associated with this dialogue tree.")]
+    public int requiredHearts;
 }
