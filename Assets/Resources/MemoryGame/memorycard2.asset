@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e723f7663cb7d1047bd2cb61f52aed49, type: 3}
+  m_Name: memorycard2
+  m_EditorClassIdentifier: Assembly-CSharp::MemoryGameCard
+  text: Blue
+  match: {fileID: 11400000, guid: 778acf3a234f0c146b524613ae2975f7, type: 2}
+  face: {fileID: 0}
+  back: {fileID: -2895157278119961449, guid: 9459a33c83dfc6e419d032f96fa08196, type: 3}
+  flippable: 0

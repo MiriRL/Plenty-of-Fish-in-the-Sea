@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
+  m_Name: Pod
+  m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  id: Pod
+  text: Oh, haha! Good one! I was worried there for a second. You know, I think you
+    and I might just get along like two whales in a pod!
+  nextSentence: {fileID: 0}
+  options:
+  - id: Pod1
+    text: I think so too!
+    nextSentence: {fileID: 11400000, guid: 450f6b35a00ad40b9b9139c1e8dec8e1, type: 2}
+    onOptionSelected: {fileID: 0}
+  - id: Pod2
+    text: Haha, I get that one...
+    nextSentence: {fileID: 11400000, guid: fcec0f351280241acb59ac4b9b78390f, type: 2}
+    onOptionSelected: {fileID: 0}
+  - id: Pod3
+    text: I don't find your fish puns funny.
+    nextSentence: {fileID: 11400000, guid: ac23657594bd24eea8f02f06e1b8e18d, type: 2}
+    onOptionSelected: {fileID: 0}

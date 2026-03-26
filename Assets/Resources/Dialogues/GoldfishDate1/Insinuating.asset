@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
+  m_Name: Insinuating
+  m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  id: Insinuating
+  text: Are you insinuating that I stole your wallet? Because I promise you, I would
+    never!
+  nextSentence: {fileID: 0}
+  options:
+  - id: Insinuating1
+    text: Yes, I watched you take it! You have it on you right now!
+    nextSentence: {fileID: 11400000, guid: 1025ccf0bd62c486da68b9a2a3888f75, type: 2}
+    onOptionSelected: {fileID: 0}
+  - id: Insinuating2
+    text: No, I just want this date to be over.
+    nextSentence: {fileID: 11400000, guid: 663eb3b7b27b54d508743cf111e68ae3, type: 2}
+    onOptionSelected: {fileID: 0}

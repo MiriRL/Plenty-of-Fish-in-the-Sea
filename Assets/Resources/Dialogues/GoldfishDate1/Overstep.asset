@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
+  m_Name: Overstep
+  m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  id: Overstep
+  text: Oh I'm sorry, I didn't mean to overstep! I just get really excited about
+    playing games with people.
+  nextSentence: {fileID: 0}
+  options:
+  - id: Overstep1
+    text: Oh that's okay, I just don't want to move too fast.
+    nextSentence: {fileID: 11400000, guid: d6d360a6b03454a8d85262bf601133fd, type: 2}
+    onOptionSelected: {fileID: 0}
+  - id: Overstep2
+    text: Well next time take a chill pill, you fishstick!
+    nextSentence: {fileID: 11400000, guid: dfb41c0dd527043cb9b9d5d432718383, type: 2}
+    onOptionSelected: {fileID: 0}

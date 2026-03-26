@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
+  m_Name: Intro
+  m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  id: Intro
+  text: Hi, I'm Goldfish! It's so lovely to meet you!
+  nextSentence: {fileID: 0}
+  options:
+  - id: Intro1
+    text: It's great to meet you too!
+    nextSentence: {fileID: 11400000, guid: 3fcef7e1c9e444327b07966f447eb59e, type: 2}
+    onOptionSelected: {fileID: 0}
+  - id: Intro2
+    text: Uh, hey.
+    nextSentence: {fileID: 11400000, guid: 8cf357c82518a4a33a2c7e9b5c728757, type: 2}
+    onOptionSelected: {fileID: 0}
+  - id: Intro3
+    text: I don't know you.
+    nextSentence: {fileID: 11400000, guid: 6f3d8e6100b674030b68b3166e3b8c81, type: 2}
+    onOptionSelected: {fileID: 0}
