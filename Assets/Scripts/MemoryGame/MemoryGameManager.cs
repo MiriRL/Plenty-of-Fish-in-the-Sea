@@ -21,6 +21,24 @@ public class MemoryGameManager : MonoBehaviour
     void Update()
     {
       //Listen for card flips  
+      // when a card is clicked, add it to the pendingCards array
+
+      //When two cards have been flipped
+      if (pendingCards.Count == 2)
+        {
+            turnCount = turnCount + 1;
+            // check if they match!
+            if (pendingCards[0].CheckMatch(pendingCards[1]))
+            {
+                HandleMatch();
+            }
+            else
+            {
+                // pendingCards[0].FlipBack();
+                // pendingCards[1].FlipBack();
+                pendingCards.Clear();
+            }
+        }
     }
 
     // this function just returns a number in the range -1 to +1
@@ -29,5 +47,22 @@ public class MemoryGameManager : MonoBehaviour
     int RandomSort(string a, string b)
     {
         return Random.Range(-1, 2);
+    }
+
+    private void HandleMatch()
+    {
+        matchedCards.Add(pendingCards[0]);
+        matchedCards.Add(pendingCards[1]);
+        pendingCards.Clear();
+        if (matchedCards.Count == cardList.Count)
+        {
+            HandleWin();
+        }
+    }
+
+    private void HandleWin()
+    {
+        // translate turn count into a score
+        // end game
     }
 }

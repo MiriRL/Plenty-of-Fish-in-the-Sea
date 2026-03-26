@@ -11,19 +11,25 @@ public class MemoryGameCard : ScriptableObject
   [SerializeField] Sprite back;
   public bool flippable;
 
-  //Store card faces in a List - what type would the card faces be?
   //Front utilizes the text - 
 
     //onClick:
     //if flippable:
       //flip to front face
       // display text
+      // flippable = false
       // send a signal to MemoryGameManager
 
     //public void FlipBack(){
       //remove text
       //flip to back face 
+      // set flippable to true
     //}
     
+
+    public bool CheckMatch(MemoryGameCard otherCard)
+    {
+      return (self.match == otherCard);
+    }
     
 }
