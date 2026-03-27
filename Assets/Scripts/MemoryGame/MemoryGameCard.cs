@@ -29,7 +29,7 @@ public class MemoryGameCard : ScriptableObject
 
     public bool CheckMatch(MemoryGameCard otherCard)
     {
-      return (self.match == otherCard);
+      return (match == otherCard);
     }
     
 }
