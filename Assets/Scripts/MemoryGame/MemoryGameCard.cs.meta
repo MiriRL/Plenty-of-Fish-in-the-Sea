@@ -1,2 +1,15 @@
 fileFormatVersion: 2
 guid: e723f7663cb7d1047bd2cb61f52aed49
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - match: {instanceID: 0}
+  - face: {instanceID: 0}
+  - back: {instanceID: 0}
+  - flipEvent: {fileID: 11400000, guid: 8e12b3e064f9fc64aa3a4a5c81f91df4, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

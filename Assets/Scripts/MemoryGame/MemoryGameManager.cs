@@ -14,37 +14,20 @@ public class MemoryGameManager : MonoBehaviour
         pendingCards = new List<MemoryGameCard>();
         matchedCards = new List<MemoryGameCard>();
         // shuffle the cards
-        //System.Array.Sort(cardList, RandomSort);
+        cardList.Sort((x,y) => RandomSort());
+        //render cards on the screen - the backs should be showing
     }
 
     // Update is called once per frame
     void Update()
     {
-      //Listen for card flips  
-      // when a card is clicked, add it to the pendingCards array
-
-      //When two cards have been flipped
-      if (pendingCards.Count == 2)
-        {
-            turnCount = turnCount + 1;
-            // check if they match!
-            if (pendingCards[0].CheckMatch(pendingCards[1]))
-            {
-                HandleMatch();
-            }
-            else
-            {
-                // pendingCards[0].FlipBack();
-                // pendingCards[1].FlipBack();
-                pendingCards.Clear();
-            }
-        }
+     
     }
 
     // this function just returns a number in the range -1 to +1
     // and is used by Array.Sort to 'shuffle' the array
     //sourced from https://discussions.unity.com/t/random-shuffle-array/443149/2
-    int RandomSort(string a, string b)
+    int RandomSort()
     {
         return Random.Range(-1, 2);
     }
@@ -64,5 +47,28 @@ public class MemoryGameManager : MonoBehaviour
     {
         // translate turn count into a score
         // end game
+    }
+
+    public void onEvent()
+    {
+         //Listen for card flips  
+      // when a card is clicked, add it to the pendingCards array
+
+      //When two cards have been flipped
+      if (pendingCards.Count == 2)
+        {
+            turnCount = turnCount + 1;
+            // check if they match!
+            if (pendingCards[0].CheckMatch(pendingCards[1]))
+            {
+                HandleMatch();
+            }
+            else
+            {
+                // pendingCards[0].FlipBack();
+                // pendingCards[1].FlipBack();
+                pendingCards.Clear();
+            }
+        }
     }
 }

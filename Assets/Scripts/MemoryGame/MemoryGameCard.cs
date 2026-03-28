@@ -11,6 +11,8 @@ public class MemoryGameCard : ScriptableObject
   [SerializeField] Sprite back;
   public bool flippable;
 
+  [SerializeField] GameEvent flipEvent;
+
   //Front utilizes the text - 
 
     //onClick:
@@ -18,7 +20,7 @@ public class MemoryGameCard : ScriptableObject
       //flip to front face
       // display text
       // flippable = false
-      // send a signal to MemoryGameManager
+      // flipEvent.Raise();
 
     //public void FlipBack(){
       //remove text
