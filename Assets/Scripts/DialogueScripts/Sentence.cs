@@ -34,6 +34,6 @@ public class Choice {
     public string text;
     public Sentence nextSentence;
     public int score;
+    public string emotion;
     public GameEvent onOptionSelected;
-
 }

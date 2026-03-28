@@ -19,9 +19,11 @@ public class DialogueManager : MonoBehaviour
 
     private DialogueTree dialogue;
     private Sentence currentSentence = null;
+    private Emotion currEmotion;
 
-    public void StartDialogue(DialogueTree dialogueTree){
+    public void StartDialogue(DialogueTree dialogueTree, Emotion currentEmotion){
         dialogue = dialogueTree;
+        currEmotion = currentEmotion;
         currentSentence = dialogue.startingSentence;
         dialogueCanvas.enabled = true;
         characterNameText.text = dialogueTree.character.characterName;
@@ -43,6 +45,14 @@ public class DialogueManager : MonoBehaviour
 
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+    }
+
+    public void updateEmotion(Emotion newEmotion)
+    {
+        if (newEmotion != null && newEmotion != currEmotion)
+        {
+            
+        }
     }
 
     IEnumerator TypeSentence(string sentence){
