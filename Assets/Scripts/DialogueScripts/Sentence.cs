@@ -35,5 +35,5 @@ public class Choice {
     public Sentence nextSentence;
     public int score;
     public string emotion;
-    public GameEvent onOptionSelected;
+    //public GameEvent onOptionSelected;
 }

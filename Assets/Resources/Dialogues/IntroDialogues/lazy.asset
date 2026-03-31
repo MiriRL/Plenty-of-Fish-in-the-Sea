@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
-  m_Name: ExtraSentence
+  m_Name: lazy
   m_EditorClassIdentifier: Assembly-CSharp::Sentence
-  id: 
-  text: Wow that's cool
-  nextSentence: {fileID: 11400000, guid: 04280086523e5463793f651ae06de43a, type: 2}
+  id: A2
+  text: "Also, you should make some new friends, meet some new people. Really, you
+    don\u2019t go out enough."
+  nextSentence: {fileID: 11400000, guid: f3654b84709424fd7a110456268b8ece, type: 2}
   options: []

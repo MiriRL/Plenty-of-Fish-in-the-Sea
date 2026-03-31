@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -16,14 +17,15 @@ public class DialogueManager : MonoBehaviour
     public GameObject continueButton;
     public GameObject optionPanel;
     public TextMeshProUGUI[] optionsUI;
+    public GameEvent onEmotionChange;
 
     private DialogueTree dialogue;
     private Sentence currentSentence = null;
-    private Emotion currEmotion;
+    private string currEmotion = "";
 
-    public void StartDialogue(DialogueTree dialogueTree, Emotion currentEmotion){
+    public void StartDialogue(DialogueTree dialogueTree){
         dialogue = dialogueTree;
-        currEmotion = currentEmotion;
+        Character character = dialogueTree.character;
         currentSentence = dialogue.startingSentence;
         dialogueCanvas.enabled = true;
         characterNameText.text = dialogueTree.character.characterName;
@@ -47,12 +49,15 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TypeSentence(sentence));
     }
 
-    public void updateEmotion(Emotion newEmotion)
+    public void UpdateEmotion(string newEmotion)
     {
-        if (newEmotion != null && newEmotion != currEmotion)
-        {
-            
-        }
+        Character character = dialogue.character;
+        List<string> charEmotions = character.GetEmotionNames();
+        if (charEmotions.Count == 0) {return;}
+
+        Emotion updatedEmotion = character.GetEmotion(newEmotion);
+        character.currentEmotion = updatedEmotion;
+        onEmotionChange.Raise();
     }
 
     IEnumerator TypeSentence(string sentence){
@@ -95,10 +100,13 @@ public class DialogueManager : MonoBehaviour
 
     public void OptionOnClick(int index){
         Choice option = currentSentence.options[index];
-        if (option.onOptionSelected != null){
-            option.onOptionSelected.Raise();
-        }
         currentSentence = option.nextSentence;
+
+        Debug.Log("Emotion: " + option.emotion);
+        if (option.emotion != null && option.emotion != "" && option.emotion != currEmotion)
+        {
+            UpdateEmotion(option.emotion);
+        }
         DisplaySentence();
     }
 

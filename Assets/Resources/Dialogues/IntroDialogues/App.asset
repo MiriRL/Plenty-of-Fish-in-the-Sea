@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
-  m_Name: Welcome
+  m_Name: App
   m_EditorClassIdentifier: Assembly-CSharp::Sentence
-  id: A1
-  text: Hi dearest. Are you settling in? Your new home is so far away, make sure
-    you're keeping in touch with us back home.
-  nextSentence: {fileID: 11400000, guid: f631bc34b8df84256b78a7a42f7c6015, type: 2}
+  id: A3
+  text: "Speaking of which, have you downloaded that app your cousin mentioned? ...
+    ... You haven\u2019t even looked at it yet? Well, you should go on at least one
+    date. It\u2019ll be good for you. Like your therapist said you should try make
+    some connections."
+  nextSentence: {fileID: 11400000, guid: eac82f2106c9440e3b998ad88602d2b4, type: 2}
   options: []

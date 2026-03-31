@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
-  m_Name: TheEnd
-  m_EditorClassIdentifier: Assembly-CSharp::Sentence
-  id: D1
-  text: You made it! Yay!
-  nextSentence: {fileID: 0}
-  options: []
+  m_Script: {fileID: 11500000, guid: e6c1f7636ccdd45d5823ccb499023bfb, type: 3}
+  m_Name: EmotionChange
+  m_EditorClassIdentifier: Assembly-CSharp::GameEvent

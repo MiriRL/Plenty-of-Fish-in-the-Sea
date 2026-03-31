@@ -19,12 +19,15 @@ MonoBehaviour:
   - id: Intro1
     text: It's great to meet you too!
     nextSentence: {fileID: 11400000, guid: 3fcef7e1c9e444327b07966f447eb59e, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: 1
+    emotion: happy
   - id: Intro2
     text: Uh, hey.
     nextSentence: {fileID: 11400000, guid: 8cf357c82518a4a33a2c7e9b5c728757, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: 0
+    emotion: 
   - id: Intro3
     text: I don't know you.
     nextSentence: {fileID: 11400000, guid: 6f3d8e6100b674030b68b3166e3b8c81, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: -1
+    emotion: 

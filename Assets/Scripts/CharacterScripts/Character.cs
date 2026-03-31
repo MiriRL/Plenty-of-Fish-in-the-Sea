@@ -8,7 +8,8 @@ public class Character : ScriptableObject
     public string characterName;
     [Tooltip("The number of points the player currently has with the character.")]
     public int hearts;
-    [SerializeField] private List<Emotion> emotions = new List<Emotion>();
+    public List<Emotion> emotions = new List<Emotion>();
+    public Emotion currentEmotion;
 
     [SerializeField] private List<DialogueTree> dialogues = new List<DialogueTree>();
     [SerializeField] private List<FingeInfo> fingeDescriptions = new List<FingeInfo>();
@@ -36,7 +37,7 @@ public class Character : ScriptableObject
         return null;
     }
 
-    public string getCurrentFingeDescription()
+    public string GetCurrentFingeDescription()
     {
         if (fingeDescriptions.Count == 0)
         {
@@ -55,7 +56,7 @@ public class Character : ScriptableObject
         return "";
     }
 
-    public List<Sprite> getCurrentGifts()
+    public List<Sprite> GetCurrentGifts()
     {
         List<Sprite> currentGifts = new List<Sprite>();
         if (gifts.Count == 0 || hearts == 0)
@@ -70,6 +71,33 @@ public class Character : ScriptableObject
         }
 
         return currentGifts;
+    }
+
+    public List<string> GetEmotionNames()
+    {
+        List<string> emotionNames = new List<string>();
+        if (emotions.Count == 0)
+        {
+            Debug.Log("No emotions listed.");
+            return emotionNames;
+        }
+        foreach (Emotion emotion in emotions)
+        {
+            emotionNames.Add(emotion.emotionName);
+        }
+        return emotionNames;
+    }
+
+    public Emotion GetEmotion(string emotionName)
+    {
+        foreach (Emotion emotion in emotions)
+        {
+            if (emotionName.Equals(emotion.emotionName, System.StringComparison.OrdinalIgnoreCase))
+            {
+                return emotion;
+            }
+        }
+        return null;
     }
 }
 

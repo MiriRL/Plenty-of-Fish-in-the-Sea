@@ -10,17 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
-  m_Name: OptionsTest
+  m_Name: End
   m_EditorClassIdentifier: Assembly-CSharp::Sentence
-  id: B1
-  text: Here are some options. Choose one!
+  id: A4
+  text: Ok well, talk soon. Love you.
   nextSentence: {fileID: 0}
-  options:
-  - id: Bc1
-    text: Cool option
-    nextSentence: {fileID: 11400000, guid: 315ef42bf7e8040a6bf7bb12134ae6c6, type: 2}
-    onOptionSelected: {fileID: 0}
-  - id: Bc2
-    text: Cooler option
-    nextSentence: {fileID: 11400000, guid: 04280086523e5463793f651ae06de43a, type: 2}
-    onOptionSelected: {fileID: 0}
+  options: []

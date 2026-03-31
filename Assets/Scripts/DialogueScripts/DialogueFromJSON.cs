@@ -15,12 +15,12 @@ public class DialogueFromJSON : ScriptableObject
     private SentenceWrapper wrapper;
     
     // Takes the character name and the local path of the JSON file relative to the Dialogues folder in Resources.
-    public void LoadDialogueTree(string characterName, string JSONFileName)
+    public void LoadDialogueTree(Character talkingCharacter, string JSONFileName)
     {
         fileName = JSONFileName;
         
         dialogueTree = ScriptableObject.CreateInstance<DialogueTree>();
-        dialogueTree.character.characterName = characterName;
+        dialogueTree.character = talkingCharacter;
 
         sentences = new List<Sentence>();
         createdIds = new List<string>();
@@ -60,10 +60,9 @@ public class DialogueFromJSON : ScriptableObject
 
         string jsonText = json.text;
         wrapper = JsonUtility.FromJson<SentenceWrapper>(jsonText);
-        PrintWrapperAsIds();
+        // PrintWrapperAsIds();
 
         // Start with the first sentence.
-        // Debug.Log("Root id: " + wrapper.sentences[0].id);
         MakeSentence(wrapper.sentences[0].id);
     }
 
@@ -208,6 +207,7 @@ public class DialogueFromJSON : ScriptableObject
         newOption.id = option.id;
         newOption.text = option.text;
         newOption.score = option.score;
+        newOption.emotion = option.emotion;
         if (option.nextSentence != null) 
         { 
             newOption.idNextSentence = option.nextSentence.id; 
@@ -266,6 +266,7 @@ public class JSONChoice
     public string id;
     public string text;
     public string idNextSentence;
+    public string emotion;
     public int score;
     
 }

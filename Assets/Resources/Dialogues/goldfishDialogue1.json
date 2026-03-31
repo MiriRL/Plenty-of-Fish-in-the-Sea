@@ -1,0 +1,688 @@
+{
+    "sentences": [
+        {
+            "id": "Intro",
+            "text": "Hi, I'm Goldfish! It's so lovely to meet you!",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Intro1",
+                    "text": "It's great to meet you too!",
+                    "idNextSentence": "Swimmingly",
+                    "emotion": "happy",
+                    "score": 1
+                },
+                {
+                    "id": "Intro2",
+                    "text": "Uh, hey.",
+                    "idNextSentence": "Things",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Intro3",
+                    "text": "I don't know you.",
+                    "idNextSentence": "Obviously",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "MemoryGame",
+            "text": "Plays the game",
+            "idNextSentence": "",
+            "options": []
+        },
+        {
+            "id": "Redemption",
+            "text": "Oh, yay!",
+            "idNextSentence": "MemoryGame",
+            "options": []
+        },
+        {
+            "id": "Rejection",
+            "text": "You know, I don't know if this is going to work out between us. I think maybe we swim in different currents.",
+            "idNextSentence": "EarlyEnd",
+            "options": []
+        },
+        {
+            "id": "EarlyEnd",
+            "text": "Early end to date (failure)",
+            "idNextSentence": "",
+            "options": []
+        },
+        {
+            "id": "Awkward",
+            "text": "Oh, okay, sorry. That was sort of the activity I had planned for most of the date, so that's kind of awkward.",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Awkward1",
+                    "text": "Oh, sorry, I'll play!",
+                    "idNextSentence": "Redemption",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Awkward2",
+                    "text": "Yeah, well, maybe next time pick a better game!",
+                    "idNextSentence": "Rejection",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "MemoryRules",
+            "text": "It's pretty simple! You just pick two cards, and if they match, you take the cards out! So it's best to try and get all of the cards out in as few moves as possible, so make sure you remember where they are! Does that sound fun?",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "MemoryRules1",
+                    "text": "You bet it does!",
+                    "idNextSentence": "MemoryGame",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "MemoryRules2",
+                    "text": "Oh God no, that sounds terrible!",
+                    "idNextSentence": "Awkward",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Memory",
+            "text": "I also love everything! Swimming is always super fun, and so is fish basketball, but my favorite thing has got to be the memory game! Do you want to play the memory game?",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Memory1",
+                    "text": "Ooh, I'd love to!",
+                    "idNextSentence": "MemoryGame",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Memory2",
+                    "text": "What's the memory game?",
+                    "idNextSentence": "MemoryRules",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Memory3",
+                    "text": "Oh hell no, I hate that game!",
+                    "idNextSentence": "Awkward",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Games",
+            "text": "Games? I LOVE playing games! Do you know the memory game?",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Games1",
+                    "text": "Ooh, I'd love to!",
+                    "idNextSentence": "MemoryGame",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Games2",
+                    "text": "What's the memory game?",
+                    "idNextSentence": "MemoryRules",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Games3",
+                    "text": "Oh hell no, I hate that game!",
+                    "idNextSentence": "Awkward",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Salmon",
+            "text": "Salmon is my best friend and game buddy! They're always busy with work, though. Would you wanna play a game? It's called the memory game!",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Salmon1",
+                    "text": "Ooh, I'd love to!",
+                    "idNextSentence": "MemoryGame",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Salmon2",
+                    "text": "What's the memory game?",
+                    "idNextSentence": "MemoryRules",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Salmon3",
+                    "text": "Oh hell no, I hate that game!",
+                    "idNextSentence": "Awkward",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Respect",
+            "text": "That's totally okay, I respect that! Would you be willing to try the memory game with me tonight?",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Respect1",
+                    "text": "Ooh, I'd love to!",
+                    "idNextSentence": "MemoryGame",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Respect2",
+                    "text": "What's the memory game?",
+                    "idNextSentence": "MemoryRules",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Respect3",
+                    "text": "Oh hell no, I hate that game!",
+                    "idNextSentence": "Awkward",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Sorry",
+            "text": "I'm sorry. You know, I don't know if this is going to work out between us.",
+            "idNextSentence": "EarlyEnd",
+            "options": []
+        },
+        {
+            "id": "Overstep",
+            "text": "Oh I'm sorry, I didn't mean to overstep! I just get really excited about playing games with people.",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Overstep1",
+                    "text": "Oh that's okay, I just don't want to move too fast.",
+                    "idNextSentence": "Respect",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Overstep2",
+                    "text": "Well next time take a chill pill, you fishstick!",
+                    "idNextSentence": "Sorry",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Swimming",
+            "text": "Ooh, I love swimming! You should swim with me and Salmon sometime; we're pretty good!",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Swimming1",
+                    "text": "That sounds, fun, I'd love to! Do you guys play games often?",
+                    "idNextSentence": "Games",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Swimming2",
+                    "text": "Who the hell is Salmon?",
+                    "idNextSentence": "Salmon",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Swimming3",
+                    "text": "I don't think so, you creep!",
+                    "idNextSentence": "Overstep",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Fintastic",
+            "text": "Fintastic! Would you want to play the memory game?",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Fintastic1",
+                    "text": "Ooh, I'd love to!",
+                    "idNextSentence": "MemoryGame",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Fintastic2",
+                    "text": "What's the memory game?",
+                    "idNextSentence": "MemoryRules",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Fintastic3",
+                    "text": "Oh hell no, I hate that game!",
+                    "idNextSentence": "Awkward",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Waste",
+            "text": "Well, then I think this date might be a waste of our time.",
+            "idNextSentence": "EarlyEnd",
+            "options": []
+        },
+        {
+            "id": "Point",
+            "text": "Wait, then why are you here? Isn't that like the point?",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Point1",
+                    "text": "No, sorry, I don't know why I said that, of course I'd love to get to know you!",
+                    "idNextSentence": "Fintastic",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Point2",
+                    "text": "No, I don't think I want to get to know you.",
+                    "idNextSentence": "Waste",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Hobbies",
+            "text": "Hooray! Well, now that the hard part's done, let's get to know each other a bit! What sorts of hobbies do you have?",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Hobbies1",
+                    "text": "Oh, I like lots of things, I'm not picky at all! What do you like to do?",
+                    "idNextSentence": "Memory",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Hobbies2",
+                    "text": "Uh, I like to swim.",
+                    "idNextSentence": "Swimming",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Hobbies3",
+                    "text": "Hell no, I don't want to get to know you!",
+                    "idNextSentence": "Point",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Favorite",
+            "text": "Oh my fishness we DO have a lot in common; the memory game is my favorite! We HAVE to play!",
+            "idNextSentence": "MemoryGame",
+            "options": []
+        },
+        {
+            "id": "Important",
+            "text": "Even the memory game? Because it's really important to me that you like the memory game.",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Important1",
+                    "text": "Ooh, I'd play the memory game!",
+                    "idNextSentence": "Redemption",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Important2",
+                    "text": "Even the memory game.",
+                    "idNextSentence": "Awkward",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Common",
+            "text": "Aww, thank you! We might just have a lot in common! Do you like games?",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Common1",
+                    "text": "I love playing games!",
+                    "idNextSentence": "Fintastic",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Common2",
+                    "text": "I really like this one called the memory game!",
+                    "idNextSentence": "Favorite",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Common3",
+                    "text": "Oh god no, games are the worst!",
+                    "idNextSentence": "Important",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Everyone",
+            "text": "Oh, well that's okay, puns aren't for everyone! What sorts of things do you like?",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Everyone1",
+                    "text": "Oh, I like lots of things, I'm not picky at all! What do you like to do?",
+                    "idNextSentence": "Memory",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Everyone2",
+                    "text": "Uh, I like to swim.",
+                    "idNextSentence": "Swimming",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Everyone3",
+                    "text": "Hell no, I don't want to get to know you!",
+                    "idNextSentence": "Point",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Anemones",
+            "text": "Right? I just love puns. If you don't like them, we might become \"anemones!\"",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Anemones1",
+                    "text": "I love them, and I think you're pretty punny!",
+                    "idNextSentence": "Common",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Anemones2",
+                    "text": "I'm sorry, I really don't like puns.",
+                    "idNextSentence": "Everyone",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Swimmingly",
+            "text": "Well that's awesome! I find that often first dates can be a bit awkward, but I think we're going to get along swimmingly!",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Swimmingly1",
+                    "text": "I think so too!",
+                    "idNextSentence": "Hobbies",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Swimmingly2",
+                    "text": "Haha, I get that one...",
+                    "idNextSentence": "Anemones",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Swimmingly3",
+                    "text": "I don't find your fish puns funny.",
+                    "idNextSentence": "Everyone",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Things",
+            "text": "So uh, we should get to know each other, right? What sorts of things do you like to do?",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Things1",
+                    "text": "Oh, I like lots of things, I'm not picky at all! What do you like to do?",
+                    "idNextSentence": "Memory",
+                    "emotion": "talking2",
+                    "score": 0
+                },
+                {
+                    "id": "Things2",
+                    "text": "Uh, I like to swim.",
+                    "idNextSentence": "Swimming",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Things3",
+                    "text": "Hell no, I don't want to get to know you!",
+                    "idNextSentence": "Point",
+                    "emotion": "despair",
+                    "score": -1
+                }
+            ]
+        },
+        {
+            "id": "Cheer",
+            "text": "Oh, that's okay! Everyone has off days! Would you want to play a game to cheer up! It's called the memory game!",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Cheer1",
+                    "text": "Yeah, I'd play!",
+                    "idNextSentence": "Redemption",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Cheer2",
+                    "text": "Oh hell no!",
+                    "idNextSentence": "Awkward",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Pod",
+            "text": "Oh, haha! Good one! I was worried there for a second. You know, I think you and I might just get along like two whales in a pod!",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Pod1",
+                    "text": "I think so too!",
+                    "idNextSentence": "Hobbies",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Pod2",
+                    "text": "Haha, I get that one...",
+                    "idNextSentence": "Anemones",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Pod3",
+                    "text": "I don't find your fish puns funny.",
+                    "idNextSentence": "Everyone",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Anymore",
+            "text": "Oh dear! I can't believe you'd say this to me! I can't stay here anymore!",
+            "idNextSentence": "EarlyEnd",
+            "options": []
+        },
+        {
+            "id": "Swear",
+            "text": "Okay, I swear I don't have it! Why do you keep saying that I stole it? I don't understand!",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Swear1",
+                    "text": "Because you DO have it!",
+                    "idNextSentence": "Rejection",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Swear2",
+                    "text": "Because I hate you!",
+                    "idNextSentence": "Anymore",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Best",
+            "text": "Yeah, I don't think we were really getting along too well, so maybe this is for the best.",
+            "idNextSentence": "EarlyEnd",
+            "options": []
+        },
+        {
+            "id": "Insinuating",
+            "text": "Are you insinuating that I stole your wallet? Because I promise you, I would never!",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Insinuating1",
+                    "text": "Yes, I watched you take it! You have it on you right now!",
+                    "idNextSentence": "Swear",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Insinuating2",
+                    "text": "No, I just want this date to be over.",
+                    "idNextSentence": "Best",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Wallet",
+            "text": "Um...no? I'm sorry, did your wallet get stolen?",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Wallet1",
+                    "text": "Oh wait, you didn't steal my wallet! You must have stolen...my heart.",
+                    "idNextSentence": "Pod",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Wallet2",
+                    "text": "Yep! And I think you and I both know who did it.",
+                    "idNextSentence": "Insinuating",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Offend",
+            "text": "I'm sorry, did I do something to offend you? You've been quite short with me so far.",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Offend1",
+                    "text": "No, I'm sorry, I must just be a little off today.",
+                    "idNextSentence": "Cheer",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Offend2",
+                    "text": "Um, yes! Does \"stealing wallets\" ring any bells?",
+                    "idNextSentence": "Wallet",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Offend3",
+                    "text": "Offend me? No, I just don't like you!",
+                    "idNextSentence": "Rejection",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        },
+        {
+            "id": "Obviously",
+            "text": "Well, obviously, this is just the first date, haha! We have to get to know each other!",
+            "idNextSentence": "",
+            "options": [
+                {
+                    "id": "Obviously1",
+                    "text": "Haha, of course, I was just joking! I'd love to get to know you!",
+                    "idNextSentence": "Hobbies",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Obviously2",
+                    "text": "Yeah, I suppose.",
+                    "idNextSentence": "Offend",
+                    "emotion": "",
+                    "score": 0
+                },
+                {
+                    "id": "Obviously3",
+                    "text": "No we don't. I don't want to.",
+                    "idNextSentence": "Waste",
+                    "emotion": "",
+                    "score": 0
+                }
+            ]
+        }
+    ]
+}

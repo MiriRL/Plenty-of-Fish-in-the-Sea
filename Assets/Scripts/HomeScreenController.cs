@@ -6,6 +6,7 @@ public class HomeScreenController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private Canvas dialogueCanvas;
     [SerializeField] private DialogueTree dialogueTree;
+    [SerializeField] private CharacterSpriteController characterSpriteController;
     [Tooltip("The name of the JSON file which must be located in Resources/Dialogues")]
     [SerializeField] private string DialogueJSONFileName;
     [SerializeField] private bool writeTreeToJSON;
@@ -15,7 +16,7 @@ public class HomeScreenController : MonoBehaviour
         DialogueManager dialogueManager = dialogueCanvas.GetComponent<DialogueManager>();
         // dialogueManager.StartDialogue(dialogueTree);
         DialogueFromJSON dialogueFromJSON = ScriptableObject.CreateInstance<DialogueFromJSON>();
-        dialogueFromJSON.LoadDialogueTree("Bug", DialogueJSONFileName);
+        dialogueFromJSON.LoadDialogueTree(characterSpriteController.talkingCharacter, DialogueJSONFileName);
         dialogueManager.StartDialogue(dialogueFromJSON.dialogueTree);
         
         if (writeTreeToJSON) {

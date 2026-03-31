@@ -2,38 +2,27 @@
     "sentences": [
         {
             "id": "A1",
-            "text": "Welcome! This dialogue test is about to go swimmingly (trust).",
-            "idNextSentence": "B1",
+            "text": "Hi dearest. Are you settling in? Your new home is so far away, make sure you're keeping in touch with us back home.",
+            "idNextSentence": "A2",
             "options": []
         },
         {
             "id": "A2",
-            "text": "Wow that's cool",
-            "idNextSentence": "D1",
+            "text": "Also, you should make some new friends, meet some new people. Really, you don’t go out enough.",
+            "idNextSentence": "A3",
             "options": []
         },
         {
-            "id": "D1",
-            "text": "You made it! Yay!",
-            "idNextSentence": "",
+            "id": "A3",
+            "text": "Speaking of which, have you downloaded that app your cousin mentioned? ... ... You haven’t even looked at it yet? Well, you should go on at least one date. It’ll be good for you. Like your therapist said you should try make some connections.",
+            "idNextSentence": "A4",
             "options": []
         },
         {
-            "id": "B1",
-            "text": "Here are some options. Choose one!",
+            "id": "A4",
+            "text": "Ok well, talk soon. Love you.",
             "idNextSentence": "",
-            "options": [
-                {
-                    "id": "Bc1",
-                    "text": "Cool option",
-                    "idNextSentence": "A2"
-                },
-                {
-                    "id": "Bc2",
-                    "text": "Cooler option",
-                    "idNextSentence": "D1"
-                }
-            ]
+            "options": []
         }
     ]
 }
