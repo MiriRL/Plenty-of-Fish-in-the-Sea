@@ -165,7 +165,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MemoryGameManager
   cardList: []
-  flipListener: {fileID: 704967285}
 --- !u!114 &704967285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +180,19 @@ MonoBehaviour:
   gameEvent: {fileID: 11400000, guid: 8e12b3e064f9fc64aa3a4a5c81f91df4, type: 2}
   responseEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 704967284}
+        m_TargetAssemblyTypeName: MemoryGameManager, Assembly-CSharp
+        m_MethodName: onEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1055242163
 GameObject:
   m_ObjectHideFlags: 0

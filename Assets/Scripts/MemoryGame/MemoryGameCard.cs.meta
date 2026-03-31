@@ -6,7 +6,7 @@ MonoImporter:
   defaultReferences:
   - match: {instanceID: 0}
   - face: {instanceID: 0}
-  - back: {instanceID: 0}
+  - back: {fileID: -2895157278119961449, guid: 9459a33c83dfc6e419d032f96fa08196, type: 3}
   - flipEvent: {fileID: 11400000, guid: 8e12b3e064f9fc64aa3a4a5c81f91df4, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
