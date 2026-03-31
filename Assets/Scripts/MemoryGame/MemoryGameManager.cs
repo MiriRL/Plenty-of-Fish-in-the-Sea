@@ -2,17 +2,17 @@ using UnityEngine;
 using System.Collections.Generic;
 public class MemoryGameManager : MonoBehaviour
 {
-    [SerializeField] List<MemoryGameCard> cardList;
-    private List<MemoryGameCard> pendingCards;
-    private List<MemoryGameCard> matchedCards;
+    [SerializeField] List<GameObject> cardList;
+    private List<GameObject> pendingCards;
+    private List<GameObject> matchedCards;
     private int turnCount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         // initialize global variables
         turnCount = 0;
-        pendingCards = new List<MemoryGameCard>();
-        matchedCards = new List<MemoryGameCard>();
+        pendingCards = new List<GameObject>();
+        matchedCards = new List<GameObject>();
         // shuffle the cards
         cardList.Sort((x,y) => RandomSort());
         //render cards on the screen - the backs should be showing
@@ -59,14 +59,16 @@ public class MemoryGameManager : MonoBehaviour
         {
             turnCount = turnCount + 1;
             // check if they match!
-            if (pendingCards[0].CheckMatch(pendingCards[1]))
+            MGCardBehavior card0 = pendingCards[0].GetComponent<MGCardBehavior>();
+            MGCardBehavior card1 = pendingCards[1].GetComponent<MGCardBehavior>();
+            if (card0.CheckMatch(card1.cardInput))
             {
                 HandleMatch();
             }
             else
             {
-                // pendingCards[0].FlipBack();
-                // pendingCards[1].FlipBack();
+               card0.FlipBack();
+               card1.FlipBack();
                 pendingCards.Clear();
             }
         }
