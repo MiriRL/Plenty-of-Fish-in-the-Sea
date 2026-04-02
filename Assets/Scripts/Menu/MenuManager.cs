@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class MenuManager : MonoBehaviour
@@ -23,6 +24,11 @@ public class MenuManager : MonoBehaviour
     {
         fingeScreen.SetActive(true);
         homeScreen.SetActive(false);
+    }
+
+    public void OpenDebugScene()
+    {
+        SceneManager.LoadScene("DebugSceneMenu", LoadSceneMode.Single);
     }
 
 }
