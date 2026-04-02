@@ -576,11 +576,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4765d2c9e9ea404aaf1cdb579c8d46f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HomeScreenController
+  startDialogue: {fileID: 11400000, guid: 8aa261ddda7854cd19241ec1a3069392, type: 2}
   dialogueCanvas: {fileID: 1391784741}
-  dialogueTree: {fileID: 11400000, guid: 03a05e95d3eb84697a90ab16840ff138, type: 2}
   characterSpriteController: {fileID: 739519723}
-  DialogueJSONFileName: goldfishDialogue1
-  writeTreeToJSON: 1
 --- !u!4 &1565733670
 Transform:
   m_ObjectHideFlags: 0
