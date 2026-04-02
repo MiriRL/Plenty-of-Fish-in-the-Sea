@@ -20,15 +20,15 @@ MonoBehaviour:
   - id: Things1
     text: Oh, I like lots of things, I'm not picky at all! What do you like to do?
     nextSentence: {fileID: 11400000, guid: cff2cffe43f364a2ca8be92042ffaf84, type: 2}
-    score: 0
-    emotion: talking2
+    score: 1
+    emotion: talking1
   - id: Things2
     text: Uh, I like to swim.
     nextSentence: {fileID: 11400000, guid: 4372c41e7b5904031914f8e691ccf4f3, type: 2}
     score: 0
-    emotion: 
+    emotion: talking1
   - id: Things3
     text: Hell no, I don't want to get to know you!
     nextSentence: {fileID: 11400000, guid: 74e0ca072b2c040b183906146bc2f57f, type: 2}
     score: -1
-    emotion: despair
+    emotion: neutral

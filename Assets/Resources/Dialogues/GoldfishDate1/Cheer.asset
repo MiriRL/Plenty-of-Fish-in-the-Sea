@@ -20,8 +20,10 @@ MonoBehaviour:
   - id: Cheer1
     text: Yeah, I'd play!
     nextSentence: {fileID: 11400000, guid: 113f5de3784124187ae2ad37cce5ed9f, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: 1
+    emotion: excited
   - id: Cheer2
     text: Oh hell no!
     nextSentence: {fileID: 11400000, guid: 7e4a6580474ef49c2af25f821024f687, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: -1
+    emotion: sad

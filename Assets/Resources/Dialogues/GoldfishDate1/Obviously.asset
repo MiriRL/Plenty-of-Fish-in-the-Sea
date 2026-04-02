@@ -20,12 +20,15 @@ MonoBehaviour:
   - id: Obviously1
     text: Haha, of course, I was just joking! I'd love to get to know you!
     nextSentence: {fileID: 11400000, guid: 450f6b35a00ad40b9b9139c1e8dec8e1, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: 1
+    emotion: happy
   - id: Obviously2
     text: Yeah, I suppose.
     nextSentence: {fileID: 11400000, guid: 9f8c85474ad0b453fa6268608eaf4cc6, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: 0
+    emotion: neutral
   - id: Obviously3
     text: No we don't. I don't want to.
     nextSentence: {fileID: 11400000, guid: 1a492559bf8fb470ea65eaeb28caedcc, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: -1
+    emotion: sad

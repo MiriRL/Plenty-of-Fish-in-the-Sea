@@ -20,8 +20,10 @@ MonoBehaviour:
   - id: Overstep1
     text: Oh that's okay, I just don't want to move too fast.
     nextSentence: {fileID: 11400000, guid: d6d360a6b03454a8d85262bf601133fd, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: 0
+    emotion: happy
   - id: Overstep2
     text: Well next time take a chill pill, you fishstick!
     nextSentence: {fileID: 11400000, guid: dfb41c0dd527043cb9b9d5d432718383, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: -1
+    emotion: crying

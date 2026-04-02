@@ -19,8 +19,10 @@ MonoBehaviour:
   - id: Anemones1
     text: I love them, and I think you're pretty punny!
     nextSentence: {fileID: 11400000, guid: 7960b5a2cc38041adbe8e5360a9b8fe7, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: 1
+    emotion: excited
   - id: Anemones2
     text: I'm sorry, I really don't like puns.
     nextSentence: {fileID: 11400000, guid: ac23657594bd24eea8f02f06e1b8e18d, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: 0
+    emotion: neutral

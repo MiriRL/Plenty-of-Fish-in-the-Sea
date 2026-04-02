@@ -20,8 +20,10 @@ MonoBehaviour:
   - id: Swear1
     text: Because you DO have it!
     nextSentence: {fileID: 11400000, guid: a7d073262583e4bcc91830e898402fcd, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: -1
+    emotion: crying
   - id: Swear2
     text: Because I hate you!
     nextSentence: {fileID: 11400000, guid: 101890a00262a4ff5915daf89a8592f4, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: -1
+    emotion: crying

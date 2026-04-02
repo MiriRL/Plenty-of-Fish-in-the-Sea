@@ -65,6 +65,12 @@ public class DialogueManager : MonoBehaviour
         foreach(char letter in sentence.ToCharArray()){
             dialogueUIText.text += letter;
 
+            // Wait longer if the dialogue has a ...
+            if (dialogueUIText.text.EndsWith("..."))
+            {
+                yield return new WaitForSeconds(0.5f);
+            }
+
             yield return new WaitForSeconds(0.05f);
         }
 

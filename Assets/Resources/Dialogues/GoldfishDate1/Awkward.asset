@@ -20,8 +20,10 @@ MonoBehaviour:
   - id: Awkward1
     text: Oh, sorry, I'll play!
     nextSentence: {fileID: 11400000, guid: 113f5de3784124187ae2ad37cce5ed9f, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: 1
+    emotion: excited
   - id: Awkward2
     text: Yeah, well, maybe next time pick a better game!
     nextSentence: {fileID: 11400000, guid: a7d073262583e4bcc91830e898402fcd, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: -1
+    emotion: despair
