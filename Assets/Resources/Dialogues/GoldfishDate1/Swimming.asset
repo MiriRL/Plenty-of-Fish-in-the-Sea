@@ -20,12 +20,15 @@ MonoBehaviour:
   - id: Swimming1
     text: That sounds, fun, I'd love to! Do you guys play games often?
     nextSentence: {fileID: 11400000, guid: 571c908e7e6674e6ab5850c34d4beeaf, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: 1
+    emotion: talking2
   - id: Swimming2
     text: Who the hell is Salmon?
     nextSentence: {fileID: 11400000, guid: 9ce999217b70f446182d39ea08220a93, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: 0
+    emotion: talking2
   - id: Swimming3
     text: I don't think so, you creep!
     nextSentence: {fileID: 11400000, guid: b06346d2523854fd381404649f4fc920, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: -1
+    emotion: sad

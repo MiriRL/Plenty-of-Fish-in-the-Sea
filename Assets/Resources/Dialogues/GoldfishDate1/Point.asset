@@ -20,8 +20,10 @@ MonoBehaviour:
     text: No, sorry, I don't know why I said that, of course I'd love to get to know
       you!
     nextSentence: {fileID: 11400000, guid: ebbb0abb226ce4cd0bd324956c2334d9, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: 1
+    emotion: happy
   - id: Point2
     text: No, I don't think I want to get to know you.
     nextSentence: {fileID: 11400000, guid: 1a492559bf8fb470ea65eaeb28caedcc, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: -1
+    emotion: sad
