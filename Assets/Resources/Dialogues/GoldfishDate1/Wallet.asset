@@ -19,8 +19,10 @@ MonoBehaviour:
   - id: Wallet1
     text: Oh wait, you didn't steal my wallet! You must have stolen...my heart.
     nextSentence: {fileID: 11400000, guid: 54502bcbdedaa46f899f3f14a6f0a971, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: 2
+    emotion: excited
   - id: Wallet2
     text: Yep! And I think you and I both know who did it.
     nextSentence: {fileID: 11400000, guid: 92108ca8a8bab45dd8f9cb0978ce7e46, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: -1
+    emotion: despair

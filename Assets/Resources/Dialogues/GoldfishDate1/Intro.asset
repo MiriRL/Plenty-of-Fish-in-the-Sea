@@ -25,9 +25,9 @@ MonoBehaviour:
     text: Uh, hey.
     nextSentence: {fileID: 11400000, guid: 8cf357c82518a4a33a2c7e9b5c728757, type: 2}
     score: 0
-    emotion: 
+    emotion: happy
   - id: Intro3
     text: I don't know you.
     nextSentence: {fileID: 11400000, guid: 6f3d8e6100b674030b68b3166e3b8c81, type: 2}
     score: -1
-    emotion: 
+    emotion: neutral

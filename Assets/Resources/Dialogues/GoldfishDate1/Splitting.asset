@@ -19,8 +19,10 @@ MonoBehaviour:
   - id: Splitting1
     text: Oh hell no, I deserve the world!
     nextSentence: {fileID: 11400000, guid: a97d09d821c0a4b25bbda70fe2f76f6e, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: -1
+    emotion: sad
   - id: Splitting2
     text: Oh, go fish yourself!
     nextSentence: {fileID: 11400000, guid: 101890a00262a4ff5915daf89a8592f4, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: -2
+    emotion: dead

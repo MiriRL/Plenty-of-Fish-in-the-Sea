@@ -20,12 +20,15 @@ MonoBehaviour:
   - id: Offend1
     text: No, I'm sorry, I must just be a little off today.
     nextSentence: {fileID: 11400000, guid: d930485f4924d48af831d7416169b08f, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: 1
+    emotion: happy
   - id: Offend2
     text: Um, yes! Does "stealing wallets" ring any bells?
     nextSentence: {fileID: 11400000, guid: e8a6a65da1fa84c1d9067dba9b1a4dc6, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: 0
+    emotion: despair
   - id: Offend3
     text: Offend me? No, I just don't like you!
     nextSentence: {fileID: 11400000, guid: a7d073262583e4bcc91830e898402fcd, type: 2}
-    onOptionSelected: {fileID: 0}
+    score: -1
+    emotion: crying
