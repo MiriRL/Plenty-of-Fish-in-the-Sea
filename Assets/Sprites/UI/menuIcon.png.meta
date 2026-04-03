@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d4268d1314ba442d3970975a21037c1e
+guid: d616324474bff4a99ae479ad61bcc725
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9095226945166239327
-    second: iphoneBackground_0
+      213: -3888321750828462548
+    second: menuIcon 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: iphoneBackground_0
+      name: menuIcon 2_0
       rect:
         serializedVersion: 2
-        x: 114
-        y: 45
-        width: 137
-        height: 277
+        x: 16
+        y: 9
+        width: 224
+        height: 239
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1a91ecd284347c180800000000000000
-      internalID: -9095226945166239327
+      spriteID: c2ec17508f7e90ac0800000000000000
+      internalID: -3888321750828462548
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      iphoneBackground_0: -9095226945166239327
+      menuIcon 2_0: -3888321750828462548
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
