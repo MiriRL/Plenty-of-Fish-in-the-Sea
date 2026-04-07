@@ -493,8 +493,9 @@ GameObject:
   - component: {fileID: 876445866}
   - component: {fileID: 876445865}
   - component: {fileID: 876445864}
+  - component: {fileID: 876445867}
   m_Layer: 0
-  m_Name: Square (4)
+  m_Name: CarObstacle
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -530,7 +531,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -614,8 +615,52 @@ Transform:
   m_GameObject: {fileID: 876445862}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.21, y: 2.49, z: 0}
+  m_LocalPosition: {x: -1.5, y: 9.71, z: 0}
   m_LocalScale: {x: 1.6656, y: 3.1634, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &876445867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876445862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2aabfa5cdcb83e48a5da49a62dc0751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstaclesScroll
+  speed: 2
+--- !u!1 &975610525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 975610526}
+  m_Layer: 0
+  m_Name: ObstacleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &975610526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975610525}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.691, y: 1.92881, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -910,6 +955,7 @@ GameObject:
   - component: {fileID: 1147556743}
   - component: {fileID: 1147556742}
   - component: {fileID: 1147556741}
+  - component: {fileID: 1147556745}
   m_Layer: 6
   m_Name: goldfish_PNG65-3855606320_0
   m_TagString: Untagged
@@ -1015,8 +1061,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c505b48aa26e753478f54b6e9764dfee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishRacingFish
-  acceleration: 12
-  turning: 0.5
+  acceleration: 10
+  turning: 1
   drift: 0.5
   movespeed: 0
 --- !u!50 &1147556743
@@ -1082,6 +1128,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 4
+--- !u!114 &1147556745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147556738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e688190bc353eb4581401635b1c12fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerKill
 --- !u!1 &1425508190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,3 +1392,4 @@ SceneRoots:
   - {fileID: 1019551341}
   - {fileID: 1147556740}
   - {fileID: 876445866}
+  - {fileID: 975610526}
