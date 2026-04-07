@@ -17,6 +17,7 @@ public class FishRacingFish : MonoBehaviour
 
     public float movespeed;
 
+    private Vector2 startPos;
     void Awake()
     {
         fish = GetComponent<Rigidbody2D>();
@@ -25,7 +26,7 @@ public class FishRacingFish : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        startPos = this.transform.position;
     }
 
     // Update is called once per frame

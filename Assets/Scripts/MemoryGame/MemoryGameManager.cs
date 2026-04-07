@@ -4,7 +4,7 @@ using System.Collections;
 
 
 
-//using tutorial: https://www.youtube.com/watch?v=HajiNmv4UNY -- 4:59
+//using tutorial: https://www.youtube.com/watch?v=HajiNmv4UNY
 public class MemoryGameManager : MonoBehaviour
 {
     [SerializeField] MGCardBehavior cardPrefab;
@@ -24,13 +24,14 @@ public class MemoryGameManager : MonoBehaviour
     }
     private void PrepareSprites()
     {
+        print("Preparing Sprites");
         spritePairs = new List<Sprite>();
         for(int i = 0; i < sprites.Length; i++)
         {
             spritePairs.Add(sprites[i]);
             spritePairs.Add(sprites[i]);
         }
-        Shuffle(spritePairs);
+        spritePairs = Shuffle(spritePairs);
     }
 
     void CreateCards()
@@ -43,15 +44,32 @@ public class MemoryGameManager : MonoBehaviour
         }
     }
 
-    void Shuffle(List<Sprite> spriteList)
+// buggy ---- how can we shuffle randomly while maintaining the cards?
+// for each element of Sprite List, pick a random, valid, unoccupied index
+// maybe have a second list of available indexes?
+    List<Sprite> Shuffle(List<Sprite> spriteList)
     {
-        for (int i = spriteList.Count - 1; i > 0; i--)
+        //Create a list of indexes
+        List<int> indexList = new List<int>();
+        for (int i = 0; i < spriteList.Count; i++)
         {
-            int randomIndex = Random.Range(0, i + 1);
-
-            Sprite temp = spriteList[i];
-            spriteList[i] = spriteList[randomIndex];
+            indexList.Add(i);
         }
+        List<Sprite> newSpriteList = new List<Sprite>();
+        for (int i = 0; i < spriteList.Count; i++)
+        {
+            int randomIndex = Random.Range(0, indexList.Count - 1);
+            int newIndex = indexList[randomIndex];
+            print("New Index:");
+            print(newIndex);
+            Sprite newSprite = spriteList[newIndex];
+            newSpriteList.Add(newSprite);
+            //newSpriteList[newIndex] = spriteList[i];
+            indexList.Remove(newIndex);
+        }
+        print("Count of sprites:");
+        print(newSpriteList.Count); // returning 0 -> FUCK
+        return newSpriteList;
     }
 
     public void SetSelected(MGCardBehavior card)
@@ -92,75 +110,4 @@ public class MemoryGameManager : MonoBehaviour
             b.Hide();
         }
     }
-    // [SerializeField] List<GameObject> cardList;
-    // private List<GameObject> pendingCards;
-    // private List<GameObject> matchedCards;
-    // private int turnCount;
-    // // Start is called once before the first execution of Update after the MonoBehaviour is created
-    // void Start()
-    // {
-    //     // initialize global variables
-    //     turnCount = 0;
-    //     pendingCards = new List<GameObject>();
-    //     matchedCards = new List<GameObject>();
-    //     // shuffle the cards
-    //     cardList.Sort((x,y) => RandomSort());
-    //     //render cards on the screen - the backs should be showing
-    // }
-
-    // // Update is called once per frame
-    // void Update()
-    // {
-     
-    // }
-
-    // // this function just returns a number in the range -1 to +1
-    // // and is used by Array.Sort to 'shuffle' the array
-    // //sourced from https://discussions.unity.com/t/random-shuffle-array/443149/2
-    // int RandomSort()
-    // {
-    //     return Random.Range(-1, 2);
-    // }
-
-    // private void HandleMatch()
-    // {
-    //     matchedCards.Add(pendingCards[0]);
-    //     matchedCards.Add(pendingCards[1]);
-    //     pendingCards.Clear();
-    //     if (matchedCards.Count == cardList.Count)
-    //     {
-    //         HandleWin();
-    //     }
-    // }
-
-    // private void HandleWin()
-    // {
-    //     // translate turn count into a score
-    //     // end game
-    // }
-
-    // public void onEvent()
-    // {
-    //      //Listen for card flips  
-    //   // when a card is clicked, add it to the pendingCards array
-
-    //   //When two cards have been flipped
-    //   if (pendingCards.Count == 2)
-    //     {
-    //         turnCount = turnCount + 1;
-    //         // check if they match!
-    //         MGCardBehavior card0 = pendingCards[0].GetComponent<MGCardBehavior>();
-    //         MGCardBehavior card1 = pendingCards[1].GetComponent<MGCardBehavior>();
-    //         if (card0.CheckMatch(card1.cardInput))
-    //         {
-    //             HandleMatch();
-    //         }
-    //         else
-    //         {
-    //            card0.FlipBack();
-    //            card1.FlipBack();
-    //             pendingCards.Clear();
-    //         }
-    //     }
-    // }
 }
