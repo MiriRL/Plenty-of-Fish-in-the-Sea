@@ -1,6 +1,3 @@
 ﻿<Solution>
   <Project Path="Assembly-CSharp.csproj" />
-  <Project Path="PrimeTween.Demo.csproj" />
-  <Project Path="PrimeTween.Debug.csproj" />
-  <Project Path="PrimeTween.Installer.csproj" />
 </Solution>
