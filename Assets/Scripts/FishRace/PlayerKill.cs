@@ -9,7 +9,7 @@ public class PlayerKill : MonoBehaviour
         startPos = transform.position;
     }
 
-    void OTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Collided");
         if (collision.CompareTag("Obstacle"))

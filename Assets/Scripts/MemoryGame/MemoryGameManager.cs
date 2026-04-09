@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using TMPro;
 
 
 
@@ -10,21 +11,25 @@ public class MemoryGameManager : MonoBehaviour
     [SerializeField] MGCardBehavior cardPrefab;
     [SerializeField] Transform gridTransform;
     [SerializeField] Sprite[] sprites;
+    [SerializeField] GameObject overlayPanel;
+    [SerializeField] TextMeshProUGUI scoreText;
     private List<Sprite> spritePairs;
 
     MGCardBehavior firstSelected;
     MGCardBehavior secondSelected;
     int matchCount;
-
+    int turnCount;
 
     private void Start()
     {
+        matchCount = 0;
+        turnCount = 0;
+        overlayPanel.SetActive(false);
         PrepareSprites();
         CreateCards();
     }
     private void PrepareSprites()
     {
-        print("Preparing Sprites");
         spritePairs = new List<Sprite>();
         for(int i = 0; i < sprites.Length; i++)
         {
@@ -44,9 +49,7 @@ public class MemoryGameManager : MonoBehaviour
         }
     }
 
-// buggy ---- how can we shuffle randomly while maintaining the cards?
-// for each element of Sprite List, pick a random, valid, unoccupied index
-// maybe have a second list of available indexes?
+
     List<Sprite> Shuffle(List<Sprite> spriteList)
     {
         //Create a list of indexes
@@ -60,15 +63,10 @@ public class MemoryGameManager : MonoBehaviour
         {
             int randomIndex = Random.Range(0, indexList.Count - 1);
             int newIndex = indexList[randomIndex];
-            print("New Index:");
-            print(newIndex);
             Sprite newSprite = spriteList[newIndex];
             newSpriteList.Add(newSprite);
-            //newSpriteList[newIndex] = spriteList[i];
             indexList.Remove(newIndex);
         }
-        print("Count of sprites:");
-        print(newSpriteList.Count); // returning 0 -> FUCK
         return newSpriteList;
     }
 
@@ -87,6 +85,7 @@ public class MemoryGameManager : MonoBehaviour
             {
                 secondSelected = card;
                 StartCoroutine(CheckMatching(firstSelected, secondSelected));
+                turnCount++;
                 firstSelected = null;
                 secondSelected = null;
             }
@@ -102,6 +101,9 @@ public class MemoryGameManager : MonoBehaviour
             if(matchCount>= spritePairs.Count / 2)
             {
                 //end game
+                scoreText.text = "Score: " + turnCount;
+                overlayPanel.SetActive(true);
+                
             }
         }
         else
