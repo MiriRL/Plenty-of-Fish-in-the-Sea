@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Goldfish
   m_EditorClassIdentifier: Assembly-CSharp::Character
   characterName: Goldfish
+  characterSprite: {fileID: 0}
   hearts: 0
   emotions:
   - emotionName: talking1
@@ -36,8 +37,10 @@ MonoBehaviour:
   currentEmotion:
     emotionName: 
     emotionSprite: {fileID: 0}
-  onEmotionChange: {fileID: 0}
   dialogues:
   - {fileID: 11400000, guid: 03a05e95d3eb84697a90ab16840ff138, type: 2}
-  fingeDescriptions: []
+  fingeDescriptions:
+  - associatedHearts: 0
+    availableInfo: 'hiya! I love meeting new people and chatting for hours. I''d
+      love to get to know you! Let''s hang out :) '
   gifts: []

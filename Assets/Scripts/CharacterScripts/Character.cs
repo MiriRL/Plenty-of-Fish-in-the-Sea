@@ -6,6 +6,7 @@ using UnityEngine;
 public class Character : ScriptableObject
 {
     public string characterName;
+    public Sprite characterSprite;
     [Tooltip("The number of points the player currently has with the character.")]
     public int hearts;
     public List<Emotion> emotions = new List<Emotion>();
