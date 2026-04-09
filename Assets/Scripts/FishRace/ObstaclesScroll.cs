@@ -8,12 +8,17 @@ public class ObstaclesScroll : MonoBehaviour
     void Start()
     {
         var pos = this.transform.position;
-        targetPos = new Vector2(pos.x, pos.y - 50);
+        targetPos = new Vector2(pos.x, pos.y - 1000f);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, targetPos, speed*Time.deltaTime);
+
+        if(this.transform.position.y < -8f)
+        {
+            Destroy(gameObject);
+        }
     }
 }
