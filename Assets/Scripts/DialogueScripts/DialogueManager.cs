@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.InputSystem;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -63,6 +64,11 @@ public class DialogueManager : MonoBehaviour
     IEnumerator TypeSentence(string sentence){
         dialogueUIText.text = "";
         foreach(char letter in sentence.ToCharArray()){
+            if (Keyboard.current.spaceKey.isPressed)
+            {
+                dialogueUIText.text = sentence;
+                break;
+            }
             dialogueUIText.text += letter;
 
             // Wait longer if the dialogue has a ...
