@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Sentence
   id: A3
   text: "Speaking of which, have you downloaded that app your cousin mentioned? ...
-    ... You haven\u2019t even looked at it yet? Well, you should go on at least one
-    date. It\u2019ll be good for you. Like your therapist said, you should try make
+    You haven\u2019t even looked at it yet? Well, you should go on at least one date.
+    It\u2019ll be good for you. Like your therapist said, you should try to make
     some connections."
   nextSentence: {fileID: 11400000, guid: eac82f2106c9440e3b998ad88602d2b4, type: 2}
   options: []

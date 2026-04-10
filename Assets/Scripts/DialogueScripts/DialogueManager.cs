@@ -63,21 +63,27 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence(string sentence){
         dialogueUIText.text = "";
+        float baseSpeed = 0.025f;
         foreach(char letter in sentence.ToCharArray()){
             if (Keyboard.current.spaceKey.isPressed)
             {
                 dialogueUIText.text = sentence;
                 break;
             }
+
             dialogueUIText.text += letter;
 
-            // Wait longer if the dialogue has a ...
+            // Wait longer if the dialogue has a ... or ends in punctuation for natural flow
             if (dialogueUIText.text.EndsWith("..."))
             {
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(15.0f*baseSpeed);
+            } else if (dialogueUIText.text.EndsWith(".") || dialogueUIText.text.EndsWith("?") || dialogueUIText.text.EndsWith("!"))
+            {
+                yield return new WaitForSeconds(5.0f*baseSpeed);
             }
 
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(baseSpeed);
+            //
         }
 
         if (currentSentence.HasOptions()){
