@@ -20,6 +20,12 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    public void GoHome()
+    {
+        homeScreen.SetActive(true);
+        fingeScreen.SetActive(false);
+    }
+
     public void OpenFinge()
     {
         fingeScreen.SetActive(true);

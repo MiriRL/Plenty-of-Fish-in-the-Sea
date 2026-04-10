@@ -37,7 +37,6 @@ public class FingeController : MonoBehaviour
         foreach (Character character in knownCharacters)
         {
             GameObject newInfo = Instantiate(characterInfo, mainScreen.transform);
-            Debug.Log(newInfo);
             Button infoButton = newInfo.GetComponentInChildren<Button>();
             if (infoButton == null)
             {
@@ -47,8 +46,10 @@ public class FingeController : MonoBehaviour
             {
                 infoButton.onClick.AddListener(() => openCharacterScreen(character));
             }
-
-            setupCharInfoButton(newInfo, character);
+            TextMeshProUGUI buttonText = infoButton.GetComponentInChildren<TextMeshProUGUI>();
+            Image iconImage = newInfo.GetComponentInChildren<Image>();
+            List<Image> heartImages = newInfo.transform.GetChild(2).gameObject.GetComponentsInChildren<Image>().ToList();
+            setupCharInfo(character, buttonText, heartImages, iconImage);
 
             infoButtons.Add(newInfo);
         }
@@ -63,14 +64,6 @@ public class FingeController : MonoBehaviour
         setupCharInfo(character, infoScreenNameText, infoScreenHearts, infoScreenIcon);
         infoScreenDescription.text = character.GetCurrentFingeDescription();
         infoScreen.SetActive(true);
-    }
-
-    private void setupCharInfoButton(GameObject charInfoButton, Character character)
-    {
-        TextMeshProUGUI buttonText = charInfoButton.GetComponentInChildren<Button>().GetComponentInChildren<TextMeshProUGUI>();
-        List<Image> heartImages = transform.Find("HeartPanel").gameObject.GetComponentsInChildren<Image>().ToList();
-        Image icon = charInfoButton.GetComponentInChildren<Image>();
-        setupCharInfo(character, buttonText, heartImages, icon);
     }
 
     private void setupCharInfo(Character character, TextMeshProUGUI nameText, List<Image> heartSprites, Image icon)
