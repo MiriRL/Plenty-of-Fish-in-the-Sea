@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
+  m_Name: Living
+  m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  id: Living
+  text: I mean, I have to make a living, don't I?
+  nextSentence: {fileID: 0}
+  options:
+  - id: Living1
+    text: "Touch\xE9, you make an excellent point."
+    nextSentence: {fileID: 11400000, guid: e4263f63b9ed14b529803dc935cb9315, type: 2}
+    score: 2
+    emotion: happy
+  - id: Living2
+    text: Not if you're stressed about it.
+    nextSentence: {fileID: 11400000, guid: 299626e3f91d74e3092ccb4808fd5261, type: 2}
+    score: -1
+    emotion: panic

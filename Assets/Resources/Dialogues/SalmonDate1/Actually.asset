@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
+  m_Name: Actually
+  m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  id: Actually
+  text: Wait, can we actually race though? I really want to now!
+  nextSentence: {fileID: 0}
+  options:
+  - id: Actually1
+    text: Racing? Yes please!
+    nextSentence: {fileID: 11400000, guid: 748fb1289688344008b14c16b669ed29, type: 2}
+    score: 1
+    emotion: glamourous
+  - id: Actually2
+    text: A race? Tell me more!
+    nextSentence: {fileID: 11400000, guid: b94ef60396b1b48dfba0239563603540, type: 2}
+    score: 0
+    emotion: happy
+  - id: Actually3
+    text: Oh goodness no, I hate racing!
+    nextSentence: {fileID: 11400000, guid: 92c3a2954db1947f5b9162e147b45dd2, type: 2}
+    score: -1
+    emotion: stressed

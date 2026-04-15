@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  id: Start
+  text: Hi! Thanks for taking time to see me!
+  nextSentence: {fileID: 0}
+  options:
+  - id: Start1
+    text: Of course! I'm looking forward to getting to know you!
+    nextSentence: {fileID: 11400000, guid: 5866f6d98dd7248be86eebbdf97474a1, type: 2}
+    score: 1
+    emotion: neutral
+  - id: Start2
+    text: I mean, yeah, what else did I have to do?
+    nextSentence: {fileID: 11400000, guid: a6410ccc851884434aa7717d0611e7cf, type: 2}
+    score: 0
+    emotion: nervous
+  - id: Start3
+    text: Oh help, this guy is a loser!
+    nextSentence: {fileID: 11400000, guid: b405f09e59e2a4630beaa4ba3d240af3, type: 2}
+    score: -1
+    emotion: panic

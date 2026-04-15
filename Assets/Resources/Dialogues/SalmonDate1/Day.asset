@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
+  m_Name: Day
+  m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  id: Day
+  text: Hey! I took time out of my day to be here, you know. I don't have to do that.
+  nextSentence: {fileID: 0}
+  options:
+  - id: Day1
+    text: You're right, I'm sorry. How can I undo that one?
+    nextSentence: {fileID: 11400000, guid: cd5bb12c3422a4141becd12f9eca705b, type: 2}
+    score: 1
+    emotion: Neutral
+  - id: Day2
+    text: Okay, I don't care.
+    nextSentence: {fileID: 11400000, guid: 99486b20c12ae4acb99f0b899ad3a09d, type: 2}
+    score: -1
+    emotion: panic
