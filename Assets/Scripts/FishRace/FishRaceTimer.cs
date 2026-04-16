@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class FishRaceTimer : MonoBehaviour
@@ -28,6 +29,7 @@ public class FishRaceTimer : MonoBehaviour
             else
             {
                 Debug.Log("Game won!");
+                SceneManager.UnloadSceneAsync("FishRace");
                 //Replace with ending the game, returning to date with win
                 timeRemaining = 0;
                 timeRunning = false;
