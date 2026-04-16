@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/StartScreen.unity
     guid: b3751b0bb740041d4ab5e4da0f8c427e
   - enabled: 1
@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MatchingGame.unity
     guid: 2efc677e22d56c943b8b54c4bee395e3
+  - enabled: 1
+    path: Assets/Scenes/DateScene.unity
+    guid: 9409a35da2d70425eaeaf5a0c0615ae2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

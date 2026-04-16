@@ -242,6 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSpriteController
   talkingCharacter: {fileID: 0}
+  emotionChange: {fileID: 0}
 --- !u!212 &242762262
 SpriteRenderer:
   serializedVersion: 2
@@ -345,9 +346,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93c50990755c0426a9f3126c4449a3d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DateManager
-  updateScore: {fileID: 0}
-  changeEmotion: {fileID: 11400000, guid: ad26ef6110a874055b22fb4950757141, type: 2}
-  dialogueManager: {fileID: 0}
+  dialogueCanvas: {fileID: 1185375943}
+  characterSpriteController: {fileID: 242762261}
+  knownCharacters:
+  - {fileID: 11400000, guid: a2a0b282e5eca46d989af9aab2002585, type: 2}
+  - {fileID: 11400000, guid: 20cc7ad01818f47158869dd306a76a64, type: 2}
 --- !u!4 &277889232
 Transform:
   m_ObjectHideFlags: 0
@@ -628,6 +631,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7c2fdd16571c4cc48aa070a09e1df7f, type: 3}
+--- !u!223 &1185375943 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 3256915062431593994, guid: d7c2fdd16571c4cc48aa070a09e1df7f, type: 3}
+  m_PrefabInstance: {fileID: 1185375942}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1941225698
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class FingeController : MonoBehaviour
@@ -10,7 +12,8 @@ public class FingeController : MonoBehaviour
     public GameObject mainScreen;
     public GameObject infoScreen;
     public GameObject characterInfo;
-    public List<Character> knownCharacters;
+    public GameEvent startDate;
+    [SerializeField] private List<Character> knownCharacters;
     // Info screen objects
     [SerializeField] private List<Image> infoScreenHearts;
     [SerializeField] private TextMeshProUGUI infoScreenNameText;
@@ -63,7 +66,21 @@ public class FingeController : MonoBehaviour
         mainScreen.SetActive(false);
         setupCharInfo(character, infoScreenNameText, infoScreenHearts, infoScreenIcon);
         infoScreenDescription.text = character.GetCurrentFingeDescription();
+        infoScreen.GetComponentInChildren<Button>().onClick.AddListener(() => SaveChosenCharacter(character));
+        infoScreen.GetComponentInChildren<Button>().onClick.AddListener(() => Debug.Log("Clicked start date"));
         infoScreen.SetActive(true);
+    }
+
+    private void SaveChosenCharacter(Character character)
+    {
+        Debug.Log(character.characterName);
+        string json = JsonUtility.ToJson(new Data{charName = character.characterName}, true);
+        
+        // Make a file for the data. Will need to be moved locations after.
+        string filePath = Path.Combine(Application.persistentDataPath, "ChosenCharacter");
+        
+        // Write the JSON sentences to the file
+        File.WriteAllText(filePath, json);
     }
 
     private void setupCharInfo(Character character, TextMeshProUGUI nameText, List<Image> heartSprites, Image icon)
@@ -90,5 +107,15 @@ public class FingeController : MonoBehaviour
         {
             icon.sprite = emptyIcon;
         }
+    }
+
+    public void StartDate()
+    {
+        SceneManager.LoadScene("DateScene", LoadSceneMode.Single);
+    }
+
+    public class Data
+    {
+        public string charName;
     }
 }

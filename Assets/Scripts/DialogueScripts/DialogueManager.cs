@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject continueButton;
     public GameObject optionPanel;
     public TextMeshProUGUI[] optionsUI;
-    public GameEvent onEmotionChange;
+    public DateManager dateManager;
 
     private DialogueTree dialogue;
     private Sentence currentSentence = null;
@@ -70,7 +70,10 @@ public class DialogueManager : MonoBehaviour
 
         Emotion updatedEmotion = character.GetEmotion(newEmotion);
         character.currentEmotion = updatedEmotion;
-        onEmotionChange.Raise();
+        if (dateManager != null)
+        {
+            dateManager.UpdateCharSprite();
+        }
     }
 
     IEnumerator TypeSentence(string sentence){
@@ -137,7 +140,7 @@ public class DialogueManager : MonoBehaviour
         {
             UpdateEmotion(option.emotion);
         }
-        if (option.score != null)
+        if (option.score != 0)
         {
             currScore += option.score;
         }
@@ -146,5 +149,9 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue(){
         dialogueCanvas.enabled = false;
+        if (dateManager != null)
+        {
+            dateManager.EndDate();
+        }
     }
 }
