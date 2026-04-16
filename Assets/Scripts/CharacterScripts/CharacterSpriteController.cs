@@ -4,6 +4,7 @@ using UnityEngine;
 public class CharacterSpriteController : MonoBehaviour
 {
     public Character talkingCharacter;
+    public GameEvent emotionChange;
     private SpriteRenderer spriteRenderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
