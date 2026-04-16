@@ -27,7 +27,6 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(DialogueTree dialogueTree){
         dialogue = dialogueTree;
-        Character character = dialogueTree.character;
         currentSentence = dialogue.startingSentence;
         dialogueCanvas.enabled = true;
         characterNameText.text = dialogueTree.character.characterName;
@@ -57,6 +56,12 @@ public class DialogueManager : MonoBehaviour
         }
         HideOptions();
         string sentence = currentSentence.text;
+
+        if (dateManager != null && (sentence == "Plays the game" || sentence == "Plays the racing game"))
+        {
+            dateManager.StartMinigame(dialogue.character);
+            return;
+        }
 
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));

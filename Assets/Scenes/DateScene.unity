@@ -534,6 +534,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2079598328483017877, guid: d7c2fdd16571c4cc48aa070a09e1df7f, type: 3}
+      propertyPath: dateManager
+      value: 
+      objectReference: {fileID: 277889231}
     - target: {fileID: 2802729802071710169, guid: d7c2fdd16571c4cc48aa070a09e1df7f, type: 3}
       propertyPath: m_Name
       value: DialogueUI

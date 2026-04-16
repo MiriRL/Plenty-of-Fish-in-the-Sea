@@ -17,7 +17,7 @@ public class PlayerKill : MonoBehaviour
         {
             transform.position = startPos;
             //Replace with ending the minigame, either ending screen or sending back to the date
-            SceneManager.UnloadSceneAsync("FishRace");
+            SceneManager.LoadSceneAsync("DateScene", LoadSceneMode.Single);
         }
     }
 }

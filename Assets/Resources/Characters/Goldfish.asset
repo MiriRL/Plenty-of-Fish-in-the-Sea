@@ -35,8 +35,8 @@ MonoBehaviour:
   - emotionName: talking2
     emotionSprite: {fileID: -5282495336281919194, guid: db743ae571bd740469d3e9b3b1834c41, type: 3}
   currentEmotion:
-    emotionName: 
-    emotionSprite: {fileID: 0}
+    emotionName: neutral
+    emotionSprite: {fileID: -1503497251555210946, guid: b189ee24e6f76430d9d5ae43fe161c9d, type: 3}
   dialogues:
   - {fileID: 11400000, guid: 03a05e95d3eb84697a90ab16840ff138, type: 2}
   fingeDescriptions:

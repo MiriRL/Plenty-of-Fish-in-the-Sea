@@ -101,7 +101,7 @@ public class DateManager : MonoBehaviour
         
         if (minigameSceneName != "")
         {
-            SceneManager.LoadSceneAsync(minigameSceneName, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(minigameSceneName, LoadSceneMode.Single);
         }
     }
 
