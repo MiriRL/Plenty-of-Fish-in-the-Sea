@@ -3,34 +3,34 @@ using System.Collections.Generic;
 using System.Collections;
 using TMPro;
 
-
+//manages the Memory Game
 
 //using tutorial: https://www.youtube.com/watch?v=HajiNmv4UNY
 public class MemoryGameManager : MonoBehaviour
 {
+    //Serializable Fields
     [SerializeField] MGCardBehavior cardPrefab;
-    [SerializeField] Transform gridTransform;
-    [SerializeField] Sprite[] sprites;
-    [SerializeField] GameObject overlayPanel;
-    [SerializeField] TextMeshProUGUI scoreText;
-    private List<Sprite> spritePairs;
 
-    MGCardBehavior firstSelected;
-    MGCardBehavior secondSelected;
-    int matchCount;
-    int turnCount;
+    //grid that the cards will appear on
+    [SerializeField] Transform gridTransform;
+
+    //sprites to be displayed on the cards -- used for identifying pairs
+    [SerializeField] Sprite[] sprites;
+    // text to be displayed on the cards
+    [SerializeField] List<string> textList;
+
+    // the panel displayed on game win
+    [SerializeField] GameObject overlayPanel;
+    // text displayed on overlayPanel
+    [SerializeField] TextMeshProUGUI scoreText;
     
-    private List<string> textList = new List<string>
-    {
-        "Favorite Color",
-        "Blue",
-        "Favorite Activity",
-        "Swimming",
-        "Best Friend",
-        "Salmon",
-        "Favorite App",
-        "Fishbook"
-    };
+
+
+    private List<Sprite> spritePairs;
+    private MGCardBehavior firstSelected;
+    private MGCardBehavior secondSelected;
+    private int matchCount;
+    private int turnCount;
     
     private void Start()
     {
@@ -42,6 +42,7 @@ public class MemoryGameManager : MonoBehaviour
     }
     private void PrepareSprites()
     {
+        //create duplicates for each sprite -- i.e. a match
         spritePairs = new List<Sprite>();
         for(int i = 0; i < sprites.Length; i++)
         {
@@ -51,10 +52,12 @@ public class MemoryGameManager : MonoBehaviour
         (spritePairs, textList) = Shuffle(spritePairs, textList);
     }
 
+    //set up cards
     void CreateCards()
     {
         for(int i = 0; i < spritePairs.Count; i++)
         {
+            //put on grid
             MGCardBehavior card = Instantiate(cardPrefab, gridTransform);
             card.SetFrontSprite(spritePairs[i]);
             card.SetFrontText(textList[i]);

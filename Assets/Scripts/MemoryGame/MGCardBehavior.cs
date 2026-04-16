@@ -2,41 +2,57 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
+//Represents a singular card for the matching game!
 public class MGCardBehavior : MonoBehaviour
 {
+    //Serializable Fields
+    
+    //representing the actual card Image
     [SerializeField] private Image frontImg;
-    private Sprite cardBack;
+    // text displayed on the card
     public TextMeshProUGUI text;
+    // front of the card
     public Sprite hiddenFrontSprite;
+    // sprite (additional image) on the card -- used to identify matches, not displayed
     public Sprite frontSprite;
 
     public bool isSelected;
     public MemoryGameManager manager;
 
+    private Sprite cardBack;
+
+    // Tells the manager which card has been clicked
     public void OnCardClick()
     {
         manager.SetSelected(this);
     }
+
+    //Sets the display image of the card -- only used for identifying pairs
     public void SetFrontSprite(Sprite s)
     {
         frontSprite = s;
     }
+
+    // sets the front text of the card
     public void SetFrontText(string s)
     {
         text.text = s;
     }
 
+    //flips the card face up
     public void Show()
     {   
+        //change front sprite to front of card
         frontImg.sprite = hiddenFrontSprite;
         text.enabled = true;
         isSelected = true;
     }
 
+    // flips the card face down
     public void Hide()
     {
         text.enabled = false;
+        //changes front image to back of card
         frontImg.sprite = cardBack;
         isSelected = false;
     }
@@ -44,44 +60,7 @@ public class MGCardBehavior : MonoBehaviour
     void Start()
     {
         text.enabled = false;
+        //get sprite from front image
         cardBack = frontImg.sprite;
     }
 }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-//     void Start()
-//  s   {
-//         frontRenderer = cardInput.face.GetComponent<SpriteRenderer>();
-//         backRenderer = cardInput.back.GetComponent<SpriteRenderer>();
-//         backRenderer.enabled = true;
-//         //enable backRenderer
-//     }
-
-//     // Update is called once per frame
-//     void Update()
-//     {
-        
-//     }
-
-//     void onClick()
-//     {
-//         if (cardInput.flippable)
-//         {
-//             backRenderer.enabled = false;
-//             frontRenderer.enabled = true;
-//             cardInput.flippable = false;
-//             cardInput.flipEvent.Raise();
-//         }
-//     }
-
-//     public void FlipBack()
-//     {
-//         frontRenderer.enabled = false;
-//         backRenderer.enabled = true; 
-//         cardInput.flippable = true;
-//     }
-
-//     public bool CheckMatch(MemoryGameCard otherCard)
-//     {
-//       return (cardInput.match == otherCard);
-//     }
-// }
