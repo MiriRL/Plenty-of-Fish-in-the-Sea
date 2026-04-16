@@ -15,6 +15,7 @@ public class PlayerKill : MonoBehaviour
         if (collision.CompareTag("Obstacle"))
         {
             transform.position = startPos;
+            //Replace with ending the minigame, either ending screen or sending back to the date
             
         }
     }
