@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerKill : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class PlayerKill : MonoBehaviour
         {
             transform.position = startPos;
             //Replace with ending the minigame, either ending screen or sending back to the date
-            
+            SceneManager.UnloadSceneAsync("FishRace");
         }
     }
 }
