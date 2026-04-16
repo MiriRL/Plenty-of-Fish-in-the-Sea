@@ -410,6 +410,15 @@ MonoBehaviour:
   - {fileID: 7062469444080745539, guid: 9eae1b4bf1f44a84a8f3f27375aa161f, type: 3}
   - {fileID: 3135066233158121504, guid: 3560cfe36051dbb49aedff70257611a0, type: 3}
   - {fileID: 4104695157364830546, guid: 9d238de929b7631449dd377afc6214bd, type: 3}
+  textList:
+  - Blue
+  - Favorite Color
+  - Favorite Activity
+  - Swimming
+  - Favorite App
+  - Fishbook
+  - Best Friend
+  - Salmon
   overlayPanel: {fileID: 1988048146}
   scoreText: {fileID: 347208527}
 --- !u!1 &898143753
