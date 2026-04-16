@@ -19,7 +19,19 @@ public class MemoryGameManager : MonoBehaviour
     MGCardBehavior secondSelected;
     int matchCount;
     int turnCount;
-
+    
+    private List<string> textList = new List<string>
+    {
+        "Favorite Color",
+        "Blue",
+        "Favorite Activity",
+        "Swimming",
+        "Best Friend",
+        "Salmon",
+        "Favorite App",
+        "Fishbook"
+    };
+    
     private void Start()
     {
         matchCount = 0;
@@ -36,7 +48,7 @@ public class MemoryGameManager : MonoBehaviour
             spritePairs.Add(sprites[i]);
             spritePairs.Add(sprites[i]);
         }
-        spritePairs = Shuffle(spritePairs);
+        (spritePairs, textList) = Shuffle(spritePairs, textList);
     }
 
     void CreateCards()
@@ -45,12 +57,13 @@ public class MemoryGameManager : MonoBehaviour
         {
             MGCardBehavior card = Instantiate(cardPrefab, gridTransform);
             card.SetFrontSprite(spritePairs[i]);
+            card.SetFrontText(textList[i]);
             card.manager = this;
         }
     }
 
 
-    List<Sprite> Shuffle(List<Sprite> spriteList)
+    (List<Sprite>, List<string>) Shuffle(List<Sprite> spriteList, List<string> textList)
     {
         //Create a list of indexes
         List<int> indexList = new List<int>();
@@ -59,15 +72,18 @@ public class MemoryGameManager : MonoBehaviour
             indexList.Add(i);
         }
         List<Sprite> newSpriteList = new List<Sprite>();
+        List<string> newTextList = new List<string>();
         for (int i = 0; i < spriteList.Count; i++)
         {
             int randomIndex = Random.Range(0, indexList.Count - 1);
             int newIndex = indexList[randomIndex];
             Sprite newSprite = spriteList[newIndex];
+            string newText= textList[newIndex];
             newSpriteList.Add(newSprite);
+            newTextList.Add(newText);
             indexList.Remove(newIndex);
         }
-        return newSpriteList;
+        return (newSpriteList, newTextList);
     }
 
     public void SetSelected(MGCardBehavior card)

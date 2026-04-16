@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 
 
 public class MGCardBehavior : MonoBehaviour
 {
     [SerializeField] private Image frontImg;
+    private Sprite cardBack;
+    public TextMeshProUGUI text;
     public Sprite hiddenFrontSprite;
     public Sprite frontSprite;
 
@@ -20,17 +22,29 @@ public class MGCardBehavior : MonoBehaviour
     {
         frontSprite = s;
     }
+    public void SetFrontText(string s)
+    {
+        text.text = s;
+    }
 
     public void Show()
     {   
-        frontImg.sprite = frontSprite;
+        frontImg.sprite = hiddenFrontSprite;
+        text.enabled = true;
         isSelected = true;
     }
 
     public void Hide()
     {
-       frontImg.sprite = hiddenFrontSprite;
+        text.enabled = false;
+        frontImg.sprite = cardBack;
         isSelected = false;
+    }
+
+    void Start()
+    {
+        text.enabled = false;
+        cardBack = frontImg.sprite;
     }
 }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
