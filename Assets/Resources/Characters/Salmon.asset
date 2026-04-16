@@ -17,25 +17,27 @@ MonoBehaviour:
   hearts: 0
   emotions:
   - emotionName: dead
-    emotionSprite: {fileID: 0}
+    emotionSprite: {fileID: -354909489662607607, guid: 67ffe767d6215460783a5b4ef6b0185f, type: 3}
   - emotionName: glamourous
-    emotionSprite: {fileID: 0}
+    emotionSprite: {fileID: 8649880369265571879, guid: 6c65caa8123404b59a21c2c6acf29003, type: 3}
   - emotionName: happy
-    emotionSprite: {fileID: 0}
+    emotionSprite: {fileID: -5176130065535258778, guid: c4237a04dff74456085b66bad51ade4f, type: 3}
   - emotionName: nervous
-    emotionSprite: {fileID: 0}
+    emotionSprite: {fileID: -1637687646133229361, guid: 02fa0d749e16845318f39e1a6f592df7, type: 3}
   - emotionName: neutral
-    emotionSprite: {fileID: 0}
+    emotionSprite: {fileID: 7091638633148897654, guid: b70d2a80b1270428c9f0322d31dc901e, type: 3}
   - emotionName: panic
-    emotionSprite: {fileID: 0}
+    emotionSprite: {fileID: 2185066914799401548, guid: 4eedecb691b334556a8fa682a3e49a3e, type: 3}
   - emotionName: relaxed
-    emotionSprite: {fileID: 0}
+    emotionSprite: {fileID: 3230118589340442044, guid: 403afe7b12f9d46a59d6f1bbf97e785c, type: 3}
   - emotionName: stressed
-    emotionSprite: {fileID: 0}
+    emotionSprite: {fileID: 7726115500565087005, guid: 80720de09694e4b10abe830b6d40e4fd, type: 3}
   currentEmotion:
     emotionName: 
     emotionSprite: {fileID: 0}
   dialogues:
-  - {fileID: 0}
-  fingeDescriptions: []
+  - {fileID: 11400000, guid: db1b3f714ddca4c878dec78b38c84ff6, type: 2}
+  fingeDescriptions:
+  - associatedHearts: 0
+    availableInfo: This is Salmon.
   gifts: []

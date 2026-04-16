@@ -23,6 +23,7 @@ public class DialogueManager : MonoBehaviour
     private DialogueTree dialogue;
     private Sentence currentSentence = null;
     private string currEmotion = "";
+    private int currScore;
 
     public void StartDialogue(DialogueTree dialogueTree){
         dialogue = dialogueTree;
@@ -30,12 +31,23 @@ public class DialogueManager : MonoBehaviour
         currentSentence = dialogue.startingSentence;
         dialogueCanvas.enabled = true;
         characterNameText.text = dialogueTree.character.characterName;
+        currScore = 0;
         DisplaySentence();
+    }
+
+    public Character GetTalkingCharacter()
+    {
+        return dialogue.character;
     }
 
     public void AdvanceSentence(){
         currentSentence = currentSentence.nextSentence;
         DisplaySentence();
+    }
+
+    public int GetCurrentScore()
+    {
+        return currScore;
     }
 
     public void DisplaySentence(){
@@ -124,6 +136,10 @@ public class DialogueManager : MonoBehaviour
         if (option.emotion != null && option.emotion != "" && option.emotion != currEmotion)
         {
             UpdateEmotion(option.emotion);
+        }
+        if (option.score != null)
+        {
+            currScore += option.score;
         }
         DisplaySentence();
     }
