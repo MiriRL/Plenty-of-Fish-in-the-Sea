@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: b3751b0bb740041d4ab5e4da0f8c427e
   - enabled: 1
+    path: Assets/Scenes/CoreScene.unity
+    guid: 8a035209c207c4794aa00d2de4c28ff4
+  - enabled: 1
     path: Assets/Scenes/DebugSceneMenu.unity
     guid: 75811dfb65e34eb4f96924b928445f1c
   - enabled: 0
