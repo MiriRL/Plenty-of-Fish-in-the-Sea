@@ -31,9 +31,13 @@ public class MemoryGameManager : MonoBehaviour
     private MGCardBehavior secondSelected;
     private int matchCount;
     private int turnCount;
+    //public game event - set to one scene transition ready game event
+    //private coremanager
     
     private void Start()
     {
+        //core = getcoremanager
+        //catch error
         matchCount = 0;
         turnCount = 0;
         overlayPanel.SetActive(false);
@@ -126,6 +130,9 @@ public class MemoryGameManager : MonoBehaviour
                 //end game
                 scoreText.text = "Score: " + turnCount;
                 overlayPanel.SetActive(true);
+
+                //onscenetransition
+                //coremanager loadnewscene - go back to home scene
                 
             }
         }
@@ -135,4 +142,6 @@ public class MemoryGameManager : MonoBehaviour
             b.Hide();
         }
     }
+
+    //copy getcoremanager function from date managers in character scripts
 }

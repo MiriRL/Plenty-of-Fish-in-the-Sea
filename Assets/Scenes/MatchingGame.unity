@@ -478,7 +478,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 200, y: 200}
-  m_Spacing: {x: 20, y: 20}
+  m_Spacing: {x: 25, y: 25}
   m_Constraint: 1
   m_ConstraintCount: 4
 --- !u!1 &1120297294
@@ -908,6 +908,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 957486704391027192, guid: 3f01608b0f869cf4698fa40ce66e4f31, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 957486704391027192, guid: 3f01608b0f869cf4698fa40ce66e4f31, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 957486704391027192, guid: 3f01608b0f869cf4698fa40ce66e4f31, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1770087714883499586, guid: 3f01608b0f869cf4698fa40ce66e4f31, type: 3}
       propertyPath: m_Name
       value: Card

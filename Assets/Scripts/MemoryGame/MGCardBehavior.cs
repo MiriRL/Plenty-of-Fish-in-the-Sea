@@ -12,6 +12,7 @@ public class MGCardBehavior : MonoBehaviour
     [SerializeField] private Image frontImg;
 
     [SerializeField] private GameObject matchPanel;
+    [SerializeField] private GameObject hoverPanel;
     // text displayed on the card
     public TextMeshProUGUI text;
     // front of the card
@@ -29,6 +30,7 @@ public class MGCardBehavior : MonoBehaviour
     public void OnCardClick()
     {
         manager.SetSelected(this);
+        hoverPanel.SetActive(false);
 
     }
 
@@ -67,6 +69,7 @@ public class MGCardBehavior : MonoBehaviour
         text.enabled = false;
         //get sprite from front image
         cardBack = frontImg.sprite;
+        hoverPanel.SetActive(false);
     }
 
     public void HidePanel()
@@ -88,5 +91,23 @@ public class MGCardBehavior : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
         HidePanel();
+    }
+
+    public void startHover()
+    {
+        if (!isSelected)
+        {
+            hoverPanel.SetActive(true);
+        }
+        
+    }
+
+    public void stopHover()
+    {
+        if (!isSelected)
+        {
+            hoverPanel.SetActive(false);
+        }
+        
     }
 }
