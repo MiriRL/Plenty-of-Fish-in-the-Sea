@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,17 +10,19 @@ public class CoreManager : MonoBehaviour
     // It should remain in the background and other scenes should be ADDITIVE loaded on top.
     // Currently made to hold only one other top scene.
     private string currTopScene = null;
-    private DateManager dateManager;
+    [Tooltip("The first character the player has access to.")]
+    [SerializeField] private Character firstCharacter;
+    private bool ready = false;  // Tracks whether the game is ready to transition scenes
 
     // Game State
     private List<Character> knownChars = new List<Character>();
-    public Character currentCharacter;
+    [NonSerialized] public Character currentCharacter;
     
     // This should only be loaded in once, after the start screen. When it is, we want to go straight to the 
     //      home screen with the intro dialogue (Mom)
     void Start()
     {
-        dateManager = GetComponent<DateManager>();
+        knownChars.Add(firstCharacter);
         LoadNewScene("HomeScreen");
     }
 
@@ -31,6 +34,11 @@ public class CoreManager : MonoBehaviour
     // Add a new character to the known characters list
     public void UpdateKnownCharacters(Character newCharacter)
     {
+        if (knownChars.Contains(newCharacter))
+        {
+            // No duplicates
+            return;
+        }
         knownChars.Add(newCharacter);
     }
     public void LoadNewScene(string sceneName)
@@ -42,17 +50,13 @@ public class CoreManager : MonoBehaviour
         StartCoroutine(LoadNewRoutine(sceneName));
     }
 
-    public void StartSceneDialogue()
-    {
-        
-    }
-
     private IEnumerator UnloadRoutine(string sceneName)
     {
+        ready = false;
         AsyncOperation asyncUnload = SceneManager.UnloadSceneAsync(sceneName);
         while (!asyncUnload.isDone)
         {
-            yield return null;
+            yield return new WaitUntil(() => ready);
         }
     }
 
@@ -67,5 +71,9 @@ public class CoreManager : MonoBehaviour
         currTopScene = sceneName;
     }
 
+    public void SetReady()
+    {
+        ready = true;
+    }
     
 }

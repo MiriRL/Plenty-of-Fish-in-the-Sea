@@ -129,9 +129,10 @@ GameObject:
   m_Component:
   - component: {fileID: 887120021}
   - component: {fileID: 887120020}
+  - component: {fileID: 887120022}
   m_Layer: 0
   m_Name: CoreManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6476e1c1b48d34a9da6c73ec0ade0438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoreManager
-  currentCharacter: {fileID: 0}
+  firstCharacter: {fileID: 11400000, guid: a2a0b282e5eca46d989af9aab2002585, type: 2}
 --- !u!4 &887120021
 Transform:
   m_ObjectHideFlags: 0
@@ -164,6 +165,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &887120022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887120019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca404f027d234417eb20b09bbd3c453a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameEventListener
+  gameEvent: {fileID: 11400000, guid: dcee5760886724a3ebb702ae5952a922, type: 2}
+  responseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 887120020}
+        m_TargetAssemblyTypeName: CoreManager, Assembly-CSharp
+        m_MethodName: SetReady
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &981088136
 GameObject:
   m_ObjectHideFlags: 0

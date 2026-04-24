@@ -404,11 +404,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93c50990755c0426a9f3126c4449a3d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DateManager
+  OnSceneTransitionReady: {fileID: 11400000, guid: dcee5760886724a3ebb702ae5952a922, type: 2}
   dialogueCanvas: {fileID: 1185375943}
   characterSpriteController: {fileID: 242762261}
-  knownCharacters:
-  - {fileID: 11400000, guid: a2a0b282e5eca46d989af9aab2002585, type: 2}
-  - {fileID: 11400000, guid: 20cc7ad01818f47158869dd306a76a64, type: 2}
 --- !u!4 &277889232
 Transform:
   m_ObjectHideFlags: 0
