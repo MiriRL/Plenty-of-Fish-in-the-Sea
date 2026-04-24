@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 //Represents a singular card for the matching game!
 public class MGCardBehavior : MonoBehaviour
@@ -9,6 +10,8 @@ public class MGCardBehavior : MonoBehaviour
     
     //representing the actual card Image
     [SerializeField] private Image frontImg;
+
+    [SerializeField] private GameObject matchPanel;
     // text displayed on the card
     public TextMeshProUGUI text;
     // front of the card
@@ -20,11 +23,13 @@ public class MGCardBehavior : MonoBehaviour
     public MemoryGameManager manager;
 
     private Sprite cardBack;
+    
 
     // Tells the manager which card has been clicked
     public void OnCardClick()
     {
         manager.SetSelected(this);
+
     }
 
     //Sets the display image of the card -- only used for identifying pairs
@@ -62,5 +67,26 @@ public class MGCardBehavior : MonoBehaviour
         text.enabled = false;
         //get sprite from front image
         cardBack = frontImg.sprite;
+    }
+
+    public void HidePanel()
+    {
+        matchPanel.SetActive(false);
+    }
+
+    public void ShowPanel()
+    {
+        matchPanel.SetActive(true);
+        StartCoroutine(AnimatePanel());
+    }
+
+    IEnumerator AnimatePanel()
+    {
+        for( int i = 0; i <= 4; i++)
+        {
+             matchPanel.transform.Rotate(matchPanel.transform.rotation.x, matchPanel.transform.rotation.y, 90 * i);
+            yield return new WaitForSeconds(0.5f);
+        }
+        HidePanel();
     }
 }

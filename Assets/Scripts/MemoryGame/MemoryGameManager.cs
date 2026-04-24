@@ -62,6 +62,8 @@ public class MemoryGameManager : MonoBehaviour
             card.SetFrontSprite(spritePairs[i]);
             card.SetFrontText(textList[i]);
             card.manager = this;
+            card.isSelected = false;
+            card.HidePanel();
         }
     }
 
@@ -117,6 +119,8 @@ public class MemoryGameManager : MonoBehaviour
         if (a.frontSprite == b.frontSprite)
         {
             matchCount++;
+            a.ShowPanel();
+            b.ShowPanel();
             if(matchCount>= spritePairs.Count / 2)
             {
                 //end game
