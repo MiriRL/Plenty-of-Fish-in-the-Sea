@@ -778,6 +778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DateManager
   dialogueCanvas: {fileID: 0}
   characterSpriteController: {fileID: 0}
+  knownCharacters: []
 --- !u!1 &2808579280740750670
 GameObject:
   m_ObjectHideFlags: 0

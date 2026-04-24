@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Goldfish
   m_EditorClassIdentifier: Assembly-CSharp::Character
   characterName: Goldfish
-  characterSprite: {fileID: 0}
+  characterIcon: {fileID: 3643878606885920179, guid: 916c09a3c894b41fc94568e4cebe793f, type: 3}
   hearts: 0
   emotions:
   - emotionName: talking1

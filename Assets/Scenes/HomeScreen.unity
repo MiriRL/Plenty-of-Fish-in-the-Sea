@@ -439,7 +439,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &739519722
+--- !u!1 &1016719091
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -447,38 +447,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 739519725}
-  - component: {fileID: 739519724}
-  - component: {fileID: 739519723}
+  - component: {fileID: 1016719094}
+  - component: {fileID: 1016719093}
+  - component: {fileID: 1016719092}
   m_Layer: 0
-  m_Name: CharacterSpriteController
+  m_Name: CharacterSpriteController (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &739519723
+--- !u!114 &1016719092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 739519722}
+  m_GameObject: {fileID: 1016719091}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4c567846e7fb4525810d9a9bb822783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterSpriteController
-  talkingCharacter: {fileID: 11400000, guid: a2a0b282e5eca46d989af9aab2002585, type: 2}
+  talkingCharacter: {fileID: 0}
   emotionChange: {fileID: 0}
---- !u!212 &739519724
+--- !u!212 &1016719093
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 739519722}
+  m_GameObject: {fileID: 1016719091}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -530,13 +530,13 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
---- !u!4 &739519725
+--- !u!4 &1016719094
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 739519722}
+  m_GameObject: {fileID: 1016719091}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -560,7 +560,7 @@ PrefabInstance:
     - target: {fileID: 605009301158916501, guid: 773c01f9beaef48ae8f0dc62d8528ad4, type: 3}
       propertyPath: characterSpriteController
       value: 
-      objectReference: {fileID: 739519723}
+      objectReference: {fileID: 0}
     - target: {fileID: 1778417362237658822, guid: 773c01f9beaef48ae8f0dc62d8528ad4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -742,7 +742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HomeScreenController
   startDialogue: {fileID: 11400000, guid: 8aa261ddda7854cd19241ec1a3069392, type: 2}
   dialogueCanvas: {fileID: 1391784741}
-  characterSpriteController: {fileID: 739519723}
+  characterSpriteController: {fileID: 0}
 --- !u!4 &1565733670
 Transform:
   m_ObjectHideFlags: 0
@@ -897,7 +897,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 256177537}
   - {fileID: 8808421860575324565}
-  - {fileID: 739519725}
+  - {fileID: 1016719094}
   - {fileID: 695812571}
   - {fileID: 1565733670}
   - {fileID: 620183621}

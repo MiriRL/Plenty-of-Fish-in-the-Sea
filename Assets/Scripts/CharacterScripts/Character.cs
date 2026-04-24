@@ -5,11 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewCharacter", menuName = "Character Object/Character")]
 public class Character : ScriptableObject
 {
+    // rah
     public string characterName;
-    public Sprite characterSprite;
-    [Tooltip("The number of points the player currently has with the character.")]
+    [Tooltip("The Finge profile photo for the character.")]
+    public Sprite characterIcon;
+    [Tooltip("The number of points the player currently has with the character. Max is 3")]
     public int hearts;
+    [Tooltip("The name and corresponding sprite for each character emotion.")]
     public List<Emotion> emotions = new List<Emotion>();
+    [Tooltip("Tracks the current emotion, but also holds the default emotion.")]
     public Emotion currentEmotion;
 
     [SerializeField] private List<DialogueTree> dialogues = new List<DialogueTree>();
