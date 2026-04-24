@@ -1013,6 +1013,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1309067627}
     - target: {fileID: 8505133036568022424, guid: 3f01608b0f869cf4698fa40ce66e4f31, type: 3}
+      propertyPath: isSelected
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8505133036568022424, guid: 3f01608b0f869cf4698fa40ce66e4f31, type: 3}
       propertyPath: hiddenFrontSprite
       value: 
       objectReference: {fileID: 7827187728472168889, guid: 3eb9e6f9b5523a34d8037b5ea0bf9bf1, type: 3}
