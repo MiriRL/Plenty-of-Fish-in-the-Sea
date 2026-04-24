@@ -9,14 +9,17 @@ public class CoreManager : MonoBehaviour
     // It should remain in the background and other scenes should be ADDITIVE loaded on top.
     // Currently made to hold only one other top scene.
     private string currTopScene = null;
+    private DateManager dateManager;
 
     // Game State
     private List<Character> knownChars = new List<Character>();
+    public Character currentCharacter;
     
     // This should only be loaded in once, after the start screen. When it is, we want to go straight to the 
-    //      home screen with the intro dialogue
+    //      home screen with the intro dialogue (Mom)
     void Start()
     {
+        dateManager = GetComponent<DateManager>();
         LoadNewScene("HomeScreen");
     }
 
@@ -37,6 +40,11 @@ public class CoreManager : MonoBehaviour
             StartCoroutine(UnloadRoutine(currTopScene));
         }
         StartCoroutine(LoadNewRoutine(sceneName));
+    }
+
+    public void StartSceneDialogue()
+    {
+        
     }
 
     private IEnumerator UnloadRoutine(string sceneName)

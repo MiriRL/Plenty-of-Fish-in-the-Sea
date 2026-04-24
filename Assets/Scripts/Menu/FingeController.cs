@@ -99,9 +99,9 @@ public class FingeController : MonoBehaviour
             }
         }
 
-        if (character.characterSprite != null) 
+        if (character.characterIcon != null) 
         {
-            icon.sprite = character.characterSprite;
+            icon.sprite = character.characterIcon;
         } 
         else
         {

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Salmon
   m_EditorClassIdentifier: Assembly-CSharp::Character
   characterName: Salmon
-  characterSprite: {fileID: 0}
+  characterIcon: {fileID: 5604917071825377899, guid: 07fd749d56b964241a1e8a7dc66bab1a, type: 3}
   hearts: 0
   emotions:
   - emotionName: dead
