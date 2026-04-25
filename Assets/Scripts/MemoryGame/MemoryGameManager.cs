@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 //manages the Memory Game
 
@@ -33,11 +34,16 @@ public class MemoryGameManager : MonoBehaviour
     private int turnCount;
     //public game event - set to one scene transition ready game event
     //private coremanager
+    public GameEvent onSceneReady;
+    private CoreManager coreManager;
     
     private void Start()
     {
-        //core = getcoremanager
-        //catch error
+        coreManager = GetCoreManager();
+        if (coreManager == null)
+        {
+            Debug.LogError("No core detected :(");
+        }
         matchCount = 0;
         turnCount = 0;
         overlayPanel.SetActive(false);
@@ -130,7 +136,7 @@ public class MemoryGameManager : MonoBehaviour
                 //end game
                 scoreText.text = "Score: " + turnCount;
                 overlayPanel.SetActive(true);
-
+                onSceneReady.Raise();
                 //onscenetransition
                 //coremanager loadnewscene - go back to home scene
                 
@@ -143,5 +149,25 @@ public class MemoryGameManager : MonoBehaviour
         }
     }
 
-    //copy getcoremanager function from date managers in character scripts
+    public void EndGame()
+    {
+        coreManager.LoadNewScene("HomeScreen");
+    }
+
+    private CoreManager GetCoreManager()
+    {
+        Scene coreScene = SceneManager.GetSceneByName("CoreScene");
+        GameObject[] coreObjects = coreScene.GetRootGameObjects();
+
+        foreach (GameObject gameObject in coreObjects) 
+        {
+            if (gameObject.CompareTag("GameController"))
+            {
+                return gameObject.GetComponent<CoreManager>();
+            }
+        }
+
+        Debug.LogError("No Core Manager found!");
+        return null;
+    }
 }
