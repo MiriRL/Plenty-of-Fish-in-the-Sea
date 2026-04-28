@@ -17,6 +17,7 @@ public class CoreManager : MonoBehaviour
     // Game State
     private List<Character> knownChars = new List<Character>();
     [NonSerialized] public Character currentCharacter;
+    [NonSerialized] public int minigameScore;
     
     // This should only be loaded in once, after the start screen. When it is, we want to go straight to the 
     //      home screen with the intro dialogue (Mom)
