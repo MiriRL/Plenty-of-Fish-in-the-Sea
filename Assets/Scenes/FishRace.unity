@@ -379,7 +379,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 382, y: 26.744995}
+  m_AnchoredPosition: {x: 382, y: -25}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &366983838
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d020a0f7dddfcf94593558e298571831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishRaceTimer
-  timeRemaining: 30
+  timeRemaining: 15
   timeRunning: 0
   timeText: {fileID: 366983838}
 --- !u!4 &722546842
@@ -1374,7 +1374,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 382, y: 93}
+  m_AnchoredPosition: {x: 382, y: 35.805008}
   m_SizeDelta: {x: 200, y: 156.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1248322645

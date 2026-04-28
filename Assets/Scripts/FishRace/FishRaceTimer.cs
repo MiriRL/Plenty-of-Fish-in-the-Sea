@@ -9,6 +9,10 @@ public class FishRaceTimer : MonoBehaviour
     public bool timeRunning = false;
     public TextMeshProUGUI timeText;
 
+    private CoreManager core;
+    public GameEvent onSceneTransitionReady;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,7 +33,10 @@ public class FishRaceTimer : MonoBehaviour
             else
             {
                 Debug.Log("Game won!");
-                SceneManager.UnloadSceneAsync("FishRace");
+                core.LoadNewScene("DateScene");
+                core.minigameScore = 1;
+                onSceneTransitionReady.Raise();
+                // SceneManager.UnloadSceneAsync("FishRace");
                 //Replace with ending the game, returning to date with win
                 timeRemaining = 0;
                 timeRunning = false;
@@ -44,5 +51,23 @@ public class FishRaceTimer : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay%60);
 
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+
+     private CoreManager GetCoreManager()
+    {
+        Scene coreScene = SceneManager.GetSceneByName("CoreScene");
+        GameObject[] coreObjects = coreScene.GetRootGameObjects();
+
+        foreach (GameObject gameObject in coreObjects) 
+        {
+            if (gameObject.CompareTag("GameController"))
+            {
+                return gameObject.GetComponent<CoreManager>();
+            }
+        }
+
+        Debug.LogError("No Core Manager found!");
+        return null;
     }
 }
