@@ -13,4 +13,5 @@ public class DialogueTree : ScriptableObject
     public Sentence startingSentence;
     [Tooltip("The number of hearts associated with this dialogue tree.")]
     public int requiredHearts;
+    public bool isMinigameDialogue;
 }

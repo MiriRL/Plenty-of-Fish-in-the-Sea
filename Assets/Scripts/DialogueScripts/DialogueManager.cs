@@ -139,6 +139,7 @@ public class DialogueManager : MonoBehaviour
     public void OptionOnClick(int index){
         Choice option = currentSentence.options[index];
         currentSentence = option.nextSentence;
+        option.onOptionSelected.Raise();
 
         Debug.Log("Emotion: " + option.emotion);
         if (option.emotion != null && option.emotion != "" && option.emotion != currEmotion)
