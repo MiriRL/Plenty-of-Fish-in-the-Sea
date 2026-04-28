@@ -7,7 +7,17 @@ public class MenuManager : MonoBehaviour
     public GameObject phone;
     public GameObject homeScreen;
     public GameObject fingeScreen;
+    public GameEvent OnSceneReady;
+    private CoreManager core;
 
+    void Start()
+    {
+        core = GetCoreManager();
+        if(core == null)
+        {
+            Debug.LogError("No Core found");
+        }
+    }
     public void ToggleMenu()
     {
         phone.SetActive(!phone.activeSelf);
@@ -34,7 +44,25 @@ public class MenuManager : MonoBehaviour
 
     public void OpenDebugScene()
     {
-        SceneManager.LoadScene("DebugSceneMenu", LoadSceneMode.Single);
+        OnSceneReady.Raise();
+        core.LoadNewScene("DebugSceneMenu");
+    }
+
+    private CoreManager GetCoreManager()
+    {
+        Scene coreScene = SceneManager.GetSceneByName("CoreScene");
+        GameObject[] coreObjects = coreScene.GetRootGameObjects();
+
+        foreach (GameObject gameObject in coreObjects) 
+        {
+            if (gameObject.CompareTag("GameController"))
+            {
+                return gameObject.GetComponent<CoreManager>();
+            }
+        }
+
+        Debug.LogError("No Core Manager found!");
+        return null;
     }
 
 }
