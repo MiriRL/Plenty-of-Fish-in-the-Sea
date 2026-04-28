@@ -421,6 +421,7 @@ MonoBehaviour:
   - Salmon
   overlayPanel: {fileID: 1988048146}
   scoreText: {fileID: 347208527}
+  salmon: {fileID: 11400000, guid: 20cc7ad01818f47158869dd306a76a64, type: 2}
   onSceneReady: {fileID: 11400000, guid: dcee5760886724a3ebb702ae5952a922, type: 2}
 --- !u!1 &898143753
 GameObject:

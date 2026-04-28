@@ -24,6 +24,7 @@ public class MemoryGameManager : MonoBehaviour
     [SerializeField] GameObject overlayPanel;
     // text displayed on overlayPanel
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] Character salmon;
     
 
 
@@ -136,6 +137,7 @@ public class MemoryGameManager : MonoBehaviour
                 //end game
                 scoreText.text = "Score: " + turnCount;
                 overlayPanel.SetActive(true);
+                coreManager.UpdateKnownCharacters(salmon);
                 onSceneReady.Raise();
                 //onscenetransition
                 //coremanager loadnewscene - go back to home scene
