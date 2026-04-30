@@ -21,14 +21,17 @@ MonoBehaviour:
     text: I think so too!
     nextSentence: {fileID: 11400000, guid: 450f6b35a00ad40b9b9139c1e8dec8e1, type: 2}
     score: 1
-    emotion: talking1
+    emotion: talking
+    onOptionSelected: {fileID: 0}
   - id: Pod2
     text: Haha, I get that one...
     nextSentence: {fileID: 11400000, guid: fcec0f351280241acb59ac4b9b78390f, type: 2}
     score: 0
-    emotion: talking1
+    emotion: talking
+    onOptionSelected: {fileID: 0}
   - id: Pod3
     text: I don't find your fish puns funny.
     nextSentence: {fileID: 11400000, guid: ac23657594bd24eea8f02f06e1b8e18d, type: 2}
     score: -1
     emotion: neutral
+    onOptionSelected: {fileID: 0}
