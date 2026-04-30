@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject continueButton;
     public GameObject optionPanel;
     public TextMeshProUGUI[] optionsUI;
+    public GameEvent OnStartDialogue;
     public GameEvent OnEndDialogue;
     public GameEvent OnStartMinigame;
     public GameEvent OnUpdateCharSprite;
@@ -34,11 +35,7 @@ public class DialogueManager : MonoBehaviour
         characterNameText.text = dialogueTree.character.characterName;
         currScore = 0;
         DisplaySentence();
-    }
-
-    public Character GetTalkingCharacter()
-    {
-        return dialogue.character;
+        OnStartDialogue.Raise();
     }
 
     public void AdvanceSentence(){

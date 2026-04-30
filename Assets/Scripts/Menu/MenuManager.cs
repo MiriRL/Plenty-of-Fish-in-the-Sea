@@ -4,6 +4,7 @@ using UnityEngine.UIElements;
 
 public class MenuManager : MonoBehaviour
 {
+    public GameObject menuButton;
     public GameObject phone;
     public GameObject homeScreen;
     public GameObject fingeScreen;
@@ -18,6 +19,17 @@ public class MenuManager : MonoBehaviour
             Debug.LogError("No Core found");
         }
     }
+    
+    public void EnableMenuButton()
+    {
+        menuButton.SetActive(true);
+    }
+
+    public void DisableMenuButton()
+    {
+        menuButton.SetActive(false);
+    }
+    
     public void ToggleMenu()
     {
         phone.SetActive(!phone.activeSelf);
