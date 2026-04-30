@@ -12,7 +12,6 @@ public class DateManager : MonoBehaviour
     private int cumulativeScore;
     private string minigameSceneName;
     private Character character;
-    private List<Character> knownCharacters;
     private CoreManager coreManager;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -75,8 +74,9 @@ public class DateManager : MonoBehaviour
         characterSpriteController.UpdateSprite();
     }
 
-    public void StartMinigame(Character character)
+    public void StartMinigame()
     {
+        character = coreManager.currentCharacter;
         // Load the minigame scene additive
         switch (character.name)
         {

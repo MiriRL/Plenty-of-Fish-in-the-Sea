@@ -258,7 +258,9 @@ MonoBehaviour:
   - {fileID: 4761728423089490323}
   - {fileID: 306121247212224312}
   - {fileID: 153770316905591740}
-  dateManager: {fileID: 0}
+  OnEndDialogue: {fileID: 11400000, guid: 4e4c8f43d2c70458fac6712590e3bf8c, type: 2}
+  OnStartMinigame: {fileID: 11400000, guid: b5c8f60503590482ebd30c5db5182a1e, type: 2}
+  OnUpdateCharSprite: {fileID: 11400000, guid: 1dde374a89f5d424290942fce45bfc66, type: 2}
 --- !u!1 &1298082806215846384
 GameObject:
   m_ObjectHideFlags: 0

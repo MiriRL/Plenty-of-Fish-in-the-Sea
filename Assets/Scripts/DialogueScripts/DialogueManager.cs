@@ -18,7 +18,9 @@ public class DialogueManager : MonoBehaviour
     public GameObject continueButton;
     public GameObject optionPanel;
     public TextMeshProUGUI[] optionsUI;
-    public DateManager dateManager;
+    public GameEvent OnEndDialogue;
+    public GameEvent OnStartMinigame;
+    public GameEvent OnUpdateCharSprite;
 
     private DialogueTree dialogue;
     private Sentence currentSentence = null;
@@ -57,9 +59,9 @@ public class DialogueManager : MonoBehaviour
         HideOptions();
         string sentence = currentSentence.text;
 
-        if (dateManager != null && (sentence == "Plays the game" || sentence == "Plays the racing game"))
+        if (sentence == "Plays the game" || sentence == "Plays the racing game")
         {
-            dateManager.StartMinigame(dialogue.character);
+            OnStartMinigame.Raise();
             return;
         }
 
@@ -75,10 +77,7 @@ public class DialogueManager : MonoBehaviour
 
         Emotion updatedEmotion = character.GetEmotion(newEmotion);
         character.currentEmotion = updatedEmotion;
-        if (dateManager != null)
-        {
-            dateManager.UpdateCharSprite();
-        }
+        OnUpdateCharSprite.Raise();
     }
 
     IEnumerator TypeSentence(string sentence){
@@ -158,9 +157,6 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue(){
         dialogueCanvas.enabled = false;
-        if (dateManager != null)
-        {
-            dateManager.EndDate();
-        }
+        OnEndDialogue.Raise();
     }
 }
