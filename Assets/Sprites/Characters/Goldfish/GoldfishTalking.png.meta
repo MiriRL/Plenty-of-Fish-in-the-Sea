@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 90225d252392d4f608dfae3b99e3e1eb
+guid: 6f9784ea26990472a9809bbaa7b749c6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8121432249065234352
-    second: GoldfishTalking1_0
+      213: -1258385783094681400
+    second: GoldfishTalking_0
   - first:
-      213: 8354823728609100818
-    second: GoldfishTalking1_1
+      213: -4125163536454697063
+    second: GoldfishTalking_1
   - first:
-      213: -3687750653233469751
-    second: GoldfishTalking1_2
+      213: -760365538935216744
+    second: GoldfishTalking_2
   - first:
-      213: 1010036220266951313
-    second: GoldfishTalking1_3
+      213: -4548297886102310908
+    second: GoldfishTalking_3
+  - first:
+      213: -2624527454781986358
+    second: GoldfishTalking_4
+  - first:
+      213: -9101745681550539487
+    second: GoldfishTalking_5
+  - first:
+      213: -8488666519745120283
+    second: GoldfishTalking_6
+  - first:
+      213: -1449144727140347062
+    second: GoldfishTalking_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GoldfishTalking1_0
+      name: GoldfishTalking_0
       rect:
         serializedVersion: 2
-        x: 1031
-        y: 819
-        width: 134
-        height: 143
+        x: 839
+        y: 815
+        width: 120
+        height: 123
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,18 +149,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 050a01f0660ea4f80800000000000000
-      internalID: -8121432249065234352
+      spriteID: 8c06d382cc0598ee0800000000000000
+      internalID: -1258385783094681400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldfishTalking1_1
+      name: GoldfishTalking_1
       rect:
         serializedVersion: 2
-        x: 41
-        y: 263
+        x: 1011
+        y: 774
+        width: 13
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99f3931ae9970c6c0800000000000000
+      internalID: -4125163536454697063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldfishTalking_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 181
         width: 897
         height: 534
       alignment: 0
@@ -159,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 21400c85aeb42f370800000000000000
-      internalID: 8354823728609100818
+      spriteID: 89561582293a275f0800000000000000
+      internalID: -760365538935216744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldfishTalking1_2
+      name: GoldfishTalking_3
       rect:
         serializedVersion: 2
-        x: 890
-        y: 697
-        width: 123
-        height: 113
+        x: 759
+        y: 685
+        width: 90
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9c6edc5c15a72dcc0800000000000000
-      internalID: -3687750653233469751
+      spriteID: 4003636ab2331e0c0800000000000000
+      internalID: -4548297886102310908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GoldfishTalking1_3
+      name: GoldfishTalking_4
       rect:
         serializedVersion: 2
-        x: 974
-        y: 541
-        width: 111
-        height: 87
+        x: 858
+        y: 591
+        width: 90
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +237,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1923a47479e540e00800000000000000
-      internalID: 1010036220266951313
+      spriteID: ac9a57a6f2ec39bd0800000000000000
+      internalID: -2624527454781986358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldfishTalking_5
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 712
+        width: 58
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1250c37968a10b180800000000000000
+      internalID: -9101745681550539487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldfishTalking_6
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 459
+        width: 69
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e737d176c2323a80800000000000000
+      internalID: -8488666519745120283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldfishTalking_7
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 536
+        width: 26
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a435bae6c8a93ebe0800000000000000
+      internalID: -1449144727140347062
       vertices: []
       indices: 
       edges: []
@@ -223,10 +323,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      GoldfishTalking1_0: -8121432249065234352
-      GoldfishTalking1_1: 8354823728609100818
-      GoldfishTalking1_2: -3687750653233469751
-      GoldfishTalking1_3: 1010036220266951313
+      GoldfishTalking_0: -1258385783094681400
+      GoldfishTalking_1: -4125163536454697063
+      GoldfishTalking_2: -760365538935216744
+      GoldfishTalking_3: -4548297886102310908
+      GoldfishTalking_4: -2624527454781986358
+      GoldfishTalking_5: -9101745681550539487
+      GoldfishTalking_6: -8488666519745120283
+      GoldfishTalking_7: -1449144727140347062
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
