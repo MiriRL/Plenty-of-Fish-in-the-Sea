@@ -7,12 +7,14 @@ public class PlayerKill : MonoBehaviour
 
     public GameEvent onSceneTransitionReady;
 
-    private CoreManager core;
+    private CoreManager coreManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        core = GetCoreManager();
-        if(core == null)
+        // SceneManager.LoadScene("CoreScene", LoadSceneMode.Additive);
+
+        coreManager = GetCoreManager();
+        if(coreManager == null)
         {
             Debug.Log("No coremanager found");
         }
@@ -24,8 +26,8 @@ public class PlayerKill : MonoBehaviour
         Debug.Log("Collided");
         if (collision.CompareTag("Obstacle"))
         {
-            core.LoadNewScene("DateScene");
-            core.minigameScore = 0;
+            coreManager.minigameScore = 0;
+            coreManager.LoadNewScene("DateScene");
             onSceneTransitionReady.Raise();
         //     transform.position = startPos;
         //     //Replace with ending the minigame, either ending screen or sending back to the date

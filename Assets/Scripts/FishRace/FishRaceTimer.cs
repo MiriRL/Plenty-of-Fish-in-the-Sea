@@ -9,7 +9,7 @@ public class FishRaceTimer : MonoBehaviour
     public bool timeRunning = false;
     public TextMeshProUGUI timeText;
 
-    private CoreManager core;
+    private CoreManager coremManager;
     public GameEvent onSceneTransitionReady;
 
 
@@ -32,9 +32,10 @@ public class FishRaceTimer : MonoBehaviour
             }
             else
             {
+                // SceneManager.LoadScene("CoreScene", LoadSceneMode.Additive);
+                coremManager.minigameScore = 1;
                 Debug.Log("Game won!");
-                core.LoadNewScene("DateScene");
-                core.minigameScore = 1;
+                coremManager.LoadNewScene("DateScene");
                 onSceneTransitionReady.Raise();
                 // SceneManager.UnloadSceneAsync("FishRace");
                 //Replace with ending the game, returning to date with win
