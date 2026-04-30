@@ -1088,7 +1088,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 567.04, y: 300}
+  m_AnchoredPosition: {x: 709, y: 300}
   m_SizeDelta: {x: 500, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1988048148
@@ -1361,7 +1361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &2089445440
 SpriteRenderer:
   serializedVersion: 2
@@ -1411,7 +1411,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7141765067525904753, guid: c3d4fee7c955abe4fbdae88a40569006, type: 3}
+  m_Sprite: {fileID: 7273056641176075035, guid: b9e2002600c4f4991aed59d9517c7aae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1430,8 +1430,8 @@ Transform:
   m_GameObject: {fileID: 2089445439}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -53964, y: 6574, z: 0}
-  m_LocalScale: {x: 100000, y: 100000, z: 100}
+  m_LocalPosition: {x: 30.0001, y: 24.9992, z: 0}
+  m_LocalScale: {x: 1.3639102, y: 0.9253261, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
