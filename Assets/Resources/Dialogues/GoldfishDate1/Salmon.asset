@@ -22,13 +22,16 @@ MonoBehaviour:
     nextSentence: {fileID: 11400000, guid: 37a7d619a7d7e4f4fa2a48078b0c4b58, type: 2}
     score: 1
     emotion: excited
+    onOptionSelected: {fileID: 0}
   - id: Salmon2
     text: What's the memory game?
     nextSentence: {fileID: 11400000, guid: 8c5287fd0bb1e4fcb9dabe4089eb56d6, type: 2}
     score: 0
-    emotion: talking1
+    emotion: talking
+    onOptionSelected: {fileID: 0}
   - id: Salmon3
     text: Oh hell no, I hate that game!
     nextSentence: {fileID: 11400000, guid: 7e4a6580474ef49c2af25f821024f687, type: 2}
     score: -1
     emotion: sad
+    onOptionSelected: {fileID: 0}

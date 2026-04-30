@@ -20,14 +20,17 @@ MonoBehaviour:
     text: I love playing games!
     nextSentence: {fileID: 11400000, guid: ebbb0abb226ce4cd0bd324956c2334d9, type: 2}
     score: 1
-    emotion: talking1
+    emotion: talking
+    onOptionSelected: {fileID: 0}
   - id: Common2
     text: I really like this one called the memory game!
     nextSentence: {fileID: 11400000, guid: f0c667ce97dd14734a83238ed22c6865, type: 2}
     score: 2
     emotion: excited
+    onOptionSelected: {fileID: 0}
   - id: Common3
     text: Oh god no, games are the worst!
     nextSentence: {fileID: 11400000, guid: c9a6d0cc2d7d249c4b0f951aeba8ba07, type: 2}
     score: -1
     emotion: sad
+    onOptionSelected: {fileID: 0}

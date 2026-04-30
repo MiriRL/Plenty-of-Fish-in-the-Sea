@@ -16,8 +16,8 @@ MonoBehaviour:
   characterIcon: {fileID: 3643878606885920179, guid: 916c09a3c894b41fc94568e4cebe793f, type: 3}
   hearts: 0
   emotions:
-  - emotionName: talking1
-    emotionSprite: {fileID: -8121432249065234352, guid: 90225d252392d4f608dfae3b99e3e1eb, type: 3}
+  - emotionName: talking
+    emotionSprite: {fileID: -1258385783094681400, guid: 6f9784ea26990472a9809bbaa7b749c6, type: 3}
   - emotionName: crying
     emotionSprite: {fileID: 5900121124419885490, guid: b8bb50a6f50c848a4bd705235f26f2da, type: 3}
   - emotionName: dead
@@ -32,8 +32,6 @@ MonoBehaviour:
     emotionSprite: {fileID: -1503497251555210946, guid: b189ee24e6f76430d9d5ae43fe161c9d, type: 3}
   - emotionName: sad
     emotionSprite: {fileID: 2358552735186354968, guid: af9b076c9d3f249ffbee20818c377c4b, type: 3}
-  - emotionName: talking2
-    emotionSprite: {fileID: -5282495336281919194, guid: db743ae571bd740469d3e9b3b1834c41, type: 3}
   currentEmotion:
     emotionName: neutral
     emotionSprite: {fileID: -1503497251555210946, guid: b189ee24e6f76430d9d5ae43fe161c9d, type: 3}
