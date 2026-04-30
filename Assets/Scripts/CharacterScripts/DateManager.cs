@@ -8,6 +8,7 @@ public class DateManager : MonoBehaviour
     public GameEvent OnSceneTransitionReady;
     [SerializeField] private Canvas dialogueCanvas;
     [SerializeField] private CharacterSpriteController characterSpriteController;
+    [SerializeField] private Character mom;
     private DialogueManager dialogueManager;
     private int cumulativeScore;
     private string minigameSceneName;
@@ -41,12 +42,22 @@ public class DateManager : MonoBehaviour
 
     private void StartDialogue()
     {
-        if (character.chooseDialogue() == null)
+        DialogueTree chosenDialogue = null;
+        if (coreManager.hasPlayedMinigame)
+        {
+            chosenDialogue = character.ChooseMinigameEndDialogue();
+        }
+        else
+        {
+            chosenDialogue = character.ChooseDialogue();
+        }
+        
+        if (chosenDialogue == null)
         {
             Debug.LogError("No Dialogue!");
         }
         
-        dialogueManager.StartDialogue(character.chooseDialogue());
+        dialogueManager.StartDialogue(chosenDialogue);
     }
 
     public void SetCharacter(Character newCharacter)
@@ -56,14 +67,25 @@ public class DateManager : MonoBehaviour
 
     public void EndDate()
     {
+        if (!coreManager.hasPlayedMinigame)
+        {
+            // Only run this after the minigame has played
+            return;
+        }
         // Update character's hearts based on score
         // Hearts can go up or down by a maximum of two
-        UpdateScore(dialogueManager.GetCurrentScore());
+        UpdateScore(coreManager.minigameScore + coreManager.dialogueScore);
         
         int newHearts = character.hearts + cumulativeScore;
         if (newHearts > 3) { newHearts = 3; }
         if (newHearts < 0 ) { newHearts = 0; }
         character.hearts = newHearts;
+
+        // Mom also gets another heart
+        if (mom.hearts < mom.GetNumDialogues())
+        {    
+            mom.hearts += 1;
+        }
         
         OnSceneTransitionReady.Raise();
         coreManager.LoadNewScene("HomeScreen");
@@ -76,9 +98,11 @@ public class DateManager : MonoBehaviour
 
     public void StartMinigame()
     {
-        character = coreManager.currentCharacter;
+        // Save the dialogue score in the core
+        coreManager.dialogueScore = dialogueManager.GetCurrentScore();
+        coreManager.hasPlayedMinigame = true;
         // Load the minigame scene additive
-        switch (character.name)
+        switch (coreManager.currentCharacter.name)
         {
             case "Goldfish":
                 minigameSceneName = "MatchingGame";
@@ -98,18 +122,13 @@ public class DateManager : MonoBehaviour
         }
     }
 
-    public void OnEndMinigame()
-    {
-        // Update currScore based on minigame score
-        return;
-    }
-
     private void UpdateScore(int score)
     {
+        // Keeps the score from going up or down more than 2 points at a time
         if (score > 2) { score = 2; }
         if (score < -2 ) { score = -2; }
-        Debug.Log("Date score: " + score);
         cumulativeScore += score;
+        Debug.Log("Date total score: " + cumulativeScore);
     }
 
     private CoreManager GetCoreManager()

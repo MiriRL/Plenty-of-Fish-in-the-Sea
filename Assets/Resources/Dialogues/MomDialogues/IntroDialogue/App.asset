@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
+  m_Name: App
+  m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  text: "Speaking of which, have you downloaded that app your cousin Abby mentioned?
+    ... You haven\u2019t even looked at it yet?"
+  nextSentence: {fileID: 0}
+  options:
+  - text: "Well, I \u2014 "
+    nextSentence: {fileID: 11400000, guid: cf367970fa36843488b679e00339db94, type: 2}
+    score: 0
+    emotion: 
+    onOptionSelected: {fileID: 0}
+  - text: Mommmmmmmmmmm
+    nextSentence: {fileID: 11400000, guid: cf367970fa36843488b679e00339db94, type: 2}
+    score: 0
+    emotion: 
+    onOptionSelected: {fileID: 0}
+  - text: ...
+    nextSentence: {fileID: 11400000, guid: cf367970fa36843488b679e00339db94, type: 2}
+    score: 0
+    emotion: 
+    onOptionSelected: {fileID: 0}

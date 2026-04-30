@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  text: Hi dear! How are you doing there? Have you finished unpacking yet?
+  nextSentence: {fileID: 0}
+  options:
+  - text: Hi mom. I'm okay, still unpacking.
+    nextSentence: {fileID: 11400000, guid: 17fa62641caa3434dba0000fdb620ab7, type: 2}
+    score: 0
+    emotion: 
+    onOptionSelected: {fileID: 0}
+  - text: '*sigh* Not great.'
+    nextSentence: {fileID: 11400000, guid: 3ba1950b18de04a7ea940720498f57c8, type: 2}
+    score: 0
+    emotion: 
+    onOptionSelected: {fileID: 0}
+  - text: ...
+    nextSentence: {fileID: 11400000, guid: daa6689d1b2a64ce1a5e6c8b851033eb, type: 2}
+    score: 0
+    emotion: 
+    onOptionSelected: {fileID: 0}

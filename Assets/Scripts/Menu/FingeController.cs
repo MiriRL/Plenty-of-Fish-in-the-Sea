@@ -113,6 +113,10 @@ public class FingeController : MonoBehaviour
 
     public void StartDate()
     {
+        // Reset Game states in core and start date
+        coreManager.hasPlayedMinigame = false;
+        coreManager.dialogueScore = 0;
+        coreManager.minigameScore = 0;
         coreManager.LoadNewScene("DateScene");
     }
 

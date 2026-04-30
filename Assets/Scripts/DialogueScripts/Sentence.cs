@@ -10,7 +10,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="NewSentence", menuName ="Dialogue/Sentence")]
 public class Sentence : ScriptableObject
 {
-    public string id;
     [TextArea(3, 10)]
     public string text = "text";
     public Sentence nextSentence;
@@ -29,7 +28,6 @@ public class Sentence : ScriptableObject
 
 [System.Serializable]
 public class Choice {
-    public string id;
     [TextArea(3, 10)]
     public string text;
     public Sentence nextSentence;

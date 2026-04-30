@@ -6,16 +6,16 @@ using UnityEngine.SceneManagement;
 public class HomeScreenController : MonoBehaviour
 {
     // Dialogue that will play on screen start whenever it's loaded
-    public DialogueTree startDialogue;
     [SerializeField] private Canvas dialogueCanvas;
     [SerializeField] private SpriteRenderer momSprite;
+    [SerializeField] private Character mom;
     private CoreManager coreManager;
     
     void Start()
     {
         coreManager = GetCoreManager();
         DialogueManager dialogueManager = dialogueCanvas.GetComponent<DialogueManager>();
-        dialogueManager.StartDialogue(startDialogue);
+        dialogueManager.StartDialogue(ChooseMomDialogue());
         ShowMomSprite();
     }
 
@@ -29,6 +29,11 @@ public class HomeScreenController : MonoBehaviour
         momSprite.enabled = false;
     }
     
+    private DialogueTree ChooseMomDialogue()
+    {
+        return mom.ChooseDialogue();
+    }
+
     private CoreManager GetCoreManager()
     {
         Scene coreScene = SceneManager.GetSceneByName("CoreScene");

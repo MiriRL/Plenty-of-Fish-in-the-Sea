@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2b343b152a8a430eb3bda397fcbc60f, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTree
+  character: {fileID: 11400000, guid: a2a0b282e5eca46d989af9aab2002585, type: 2}
+  startingSentence: {fileID: 11400000, guid: 42607ba4ccdfb42cda46933e72a9e217, type: 2}
+  requiredHearts: 0
+  isMinigameDialogue: 1

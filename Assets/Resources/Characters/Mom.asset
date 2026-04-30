@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Mom
   m_EditorClassIdentifier: Assembly-CSharp::Character
   characterName: Mom
-  characterSprite: {fileID: 0}
-  hearts: 7
+  characterIcon: {fileID: 0}
+  hearts: 0
   emotions:
   - emotionName: default
     emotionSprite: {fileID: 2415191142289610933, guid: cbecd2198ffeb4d3e8f63db2c0e4fd68, type: 3}
@@ -23,5 +23,6 @@ MonoBehaviour:
     emotionSprite: {fileID: 2415191142289610933, guid: cbecd2198ffeb4d3e8f63db2c0e4fd68, type: 3}
   dialogues:
   - {fileID: 11400000, guid: 8aa261ddda7854cd19241ec1a3069392, type: 2}
+  - {fileID: 11400000, guid: 84c3eb5086242470e80394030ae69498, type: 2}
   fingeDescriptions: []
   gifts: []

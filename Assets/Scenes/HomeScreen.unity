@@ -741,9 +741,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4765d2c9e9ea404aaf1cdb579c8d46f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HomeScreenController
-  startDialogue: {fileID: 11400000, guid: 8aa261ddda7854cd19241ec1a3069392, type: 2}
   dialogueCanvas: {fileID: 1391784741}
   momSprite: {fileID: 1016719093}
+  mom: {fileID: 11400000, guid: 56228f6bbb40a49f9ac8e5ca4e2a762b, type: 2}
 --- !u!4 &1565733670
 Transform:
   m_ObjectHideFlags: 0

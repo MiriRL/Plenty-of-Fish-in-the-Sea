@@ -410,6 +410,7 @@ MonoBehaviour:
   OnSceneTransitionReady: {fileID: 11400000, guid: dcee5760886724a3ebb702ae5952a922, type: 2}
   dialogueCanvas: {fileID: 1185375943}
   characterSpriteController: {fileID: 242762261}
+  mom: {fileID: 11400000, guid: 56228f6bbb40a49f9ac8e5ca4e2a762b, type: 2}
 --- !u!4 &277889232
 Transform:
   m_ObjectHideFlags: 0

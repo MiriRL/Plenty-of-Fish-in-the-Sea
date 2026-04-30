@@ -23,7 +23,7 @@ public class Character : ScriptableObject
     // private List<DialogueTree> playedDialogues  -> do something like this to handle repeats if we add more
 
     // For now, I assume there is exactly one dialogue tree for each number of hearts
-    public DialogueTree chooseDialogue()
+    public DialogueTree ChooseDialogue()
     {
         if (dialogues.Count == 0)
         {
@@ -33,13 +33,37 @@ public class Character : ScriptableObject
 
         foreach (DialogueTree dialogue in dialogues)
         {
-            if (dialogue.requiredHearts == hearts) {
+            if (dialogue.requiredHearts == hearts && dialogue.isMinigameDialogue == false) {
                 return dialogue;
             }
         }
 
-        Debug.LogError("No dialogue found for " + characterName + " with " + hearts.ToString() + " number of hearts.");
+        Debug.LogError("No regular dialogue found for " + characterName + " with " + hearts.ToString() + " number of hearts.");
         return null;
+    }
+
+    public DialogueTree ChooseMinigameEndDialogue()
+    {
+        if (dialogues.Count == 0)
+        {
+            Debug.LogError("No dialogues found for " + characterName);
+            return null;
+        }
+
+        foreach (DialogueTree dialogue in dialogues)
+        {
+            if (dialogue.requiredHearts == hearts && dialogue.isMinigameDialogue == true) {
+                return dialogue;
+            }
+        }
+
+        Debug.LogError("No minigame dialogue found for " + characterName + " with " + hearts.ToString() + " number of hearts.");
+        return null;
+    }
+
+    public int GetNumDialogues()
+    {
+        return dialogues.Count;
     }
 
     public string GetCurrentFingeDescription()

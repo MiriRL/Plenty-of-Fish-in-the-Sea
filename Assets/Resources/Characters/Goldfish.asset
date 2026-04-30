@@ -37,6 +37,7 @@ MonoBehaviour:
     emotionSprite: {fileID: -1503497251555210946, guid: b189ee24e6f76430d9d5ae43fe161c9d, type: 3}
   dialogues:
   - {fileID: 11400000, guid: 03a05e95d3eb84697a90ab16840ff138, type: 2}
+  - {fileID: 11400000, guid: b30354e3dd1e947d68f98a8609a6f683, type: 2}
   fingeDescriptions:
   - associatedHearts: 0
     availableInfo: 'hiya! I love meeting new people and chatting for hours! '

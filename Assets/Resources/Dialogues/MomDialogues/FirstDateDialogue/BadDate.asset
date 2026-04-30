@@ -10,12 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
-  m_Name: App
+  m_Name: BadDate
   m_EditorClassIdentifier: Assembly-CSharp::Sentence
-  id: A3
-  text: "Speaking of which, have you downloaded that app your cousin mentioned? ...
-    You haven\u2019t even looked at it yet? Well, you should go on at least one date.
-    It\u2019ll be good for you. Like your therapist said, you should try to make
-    some connections."
-  nextSentence: {fileID: 11400000, guid: eac82f2106c9440e3b998ad88602d2b4, type: 2}
+  text: I'm sorry to hear that. Don't give up, one bad date doesn't mean you should
+    live as a hermit for the rest of your life, okay? Oh, I have to go now.
+  nextSentence: {fileID: 11400000, guid: e52c4fd27f8274201992bc5fd7edd999, type: 2}
   options: []
