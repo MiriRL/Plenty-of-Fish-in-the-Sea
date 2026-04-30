@@ -33,10 +33,11 @@ MonoBehaviour:
   - emotionName: stressed
     emotionSprite: {fileID: 7726115500565087005, guid: 80720de09694e4b10abe830b6d40e4fd, type: 3}
   currentEmotion:
-    emotionName: neutral
-    emotionSprite: {fileID: 7091638633148897654, guid: b70d2a80b1270428c9f0322d31dc901e, type: 3}
+    emotionName: glamourous
+    emotionSprite: {fileID: 8649880369265571879, guid: 6c65caa8123404b59a21c2c6acf29003, type: 3}
   dialogues:
   - {fileID: 11400000, guid: db1b3f714ddca4c878dec78b38c84ff6, type: 2}
+  - {fileID: 11400000, guid: b30354e3dd1e947d68f98a8609a6f683, type: 2}
   fingeDescriptions:
   - associatedHearts: 0
     availableInfo: This is Salmon.

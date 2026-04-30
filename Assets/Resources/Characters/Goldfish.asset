@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Character
   characterName: Goldfish
   characterIcon: {fileID: 3643878606885920179, guid: 916c09a3c894b41fc94568e4cebe793f, type: 3}
-  hearts: 0
+  hearts: 2
   emotions:
   - emotionName: talking
     emotionSprite: {fileID: -1258385783094681400, guid: 6f9784ea26990472a9809bbaa7b749c6, type: 3}
@@ -33,8 +33,8 @@ MonoBehaviour:
   - emotionName: sad
     emotionSprite: {fileID: 2358552735186354968, guid: af9b076c9d3f249ffbee20818c377c4b, type: 3}
   currentEmotion:
-    emotionName: neutral
-    emotionSprite: {fileID: -1503497251555210946, guid: b189ee24e6f76430d9d5ae43fe161c9d, type: 3}
+    emotionName: excited
+    emotionSprite: {fileID: -4028108236679445655, guid: f3596300bd48c48b0aa9457c0c8fc8c4, type: 3}
   dialogues:
   - {fileID: 11400000, guid: 03a05e95d3eb84697a90ab16840ff138, type: 2}
   - {fileID: 11400000, guid: b30354e3dd1e947d68f98a8609a6f683, type: 2}

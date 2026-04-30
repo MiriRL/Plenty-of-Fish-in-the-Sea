@@ -17,17 +17,17 @@ MonoBehaviour:
   nextSentence: {fileID: 0}
   options:
   - text: Bad.
-    nextSentence: {fileID: 0}
+    nextSentence: {fileID: 11400000, guid: c5bc9a1ff2b524332b974bb9599c6a9e, type: 2}
     score: 0
     emotion: 
     onOptionSelected: {fileID: 0}
   - text: Pretty good actually!
-    nextSentence: {fileID: 0}
+    nextSentence: {fileID: 11400000, guid: fbce5217a048f4875b60b0186dc27d29, type: 2}
     score: 0
     emotion: 
     onOptionSelected: {fileID: 0}
   - text: ...
-    nextSentence: {fileID: 0}
+    nextSentence: {fileID: 11400000, guid: 3c33e925d59d44b28bf25cf957d409bb, type: 2}
     score: 0
     emotion: 
     onOptionSelected: {fileID: 0}

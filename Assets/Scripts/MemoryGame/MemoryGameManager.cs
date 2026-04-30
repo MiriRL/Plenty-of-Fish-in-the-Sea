@@ -138,6 +138,7 @@ public class MemoryGameManager : MonoBehaviour
                 scoreText.text = "Score: " + turnCount;
                 overlayPanel.SetActive(true);
                 coreManager.UpdateKnownCharacters(salmon);
+                coreManager.minigameScore = turnCount;
                 onSceneReady.Raise();
                 //onscenetransition
                 //coremanager loadnewscene - go back to home scene
@@ -153,7 +154,7 @@ public class MemoryGameManager : MonoBehaviour
 
     public void EndGame()
     {
-        coreManager.LoadNewScene("HomeScreen");
+        coreManager.LoadNewScene("DateScene");
     }
 
     private CoreManager GetCoreManager()
