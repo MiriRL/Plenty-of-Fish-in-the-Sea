@@ -689,7 +689,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use the arrow keys to move!
+  m_text: Move the mouse to move!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 02e21ac53838ba24a92e1b5dbadf0912, type: 2}
   m_sharedMaterial: {fileID: -2795847512690401695, guid: 02e21ac53838ba24a92e1b5dbadf0912, type: 2}
@@ -801,6 +801,7 @@ MonoBehaviour:
   timeRemaining: 15
   timeRunning: 0
   timeText: {fileID: 366983838}
+  onSceneTransitionReady: {fileID: 11400000, guid: dcee5760886724a3ebb702ae5952a922, type: 2}
 --- !u!4 &722546842
 Transform:
   m_ObjectHideFlags: 0
@@ -862,8 +863,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObstacleGenerator
   obstaclePrefab: {fileID: 7675453608335962459, guid: 2b88147582cfea84697310a6cc9750ff, type: 3}
   player: {fileID: 1147556740}
-  spawnPosition: {x: 0, y: 0}
+  spawnPosition: {x: 0, y: 30}
   distanceBetweenObstacle: 20
+  warningPrefab: {fileID: 9111712633545941024, guid: 7c21bfc1ef433a147a7fea9007097108, type: 3}
   horizonDistance: 400
 --- !u!1 &988685991
 GameObject:
@@ -1153,9 +1155,9 @@ GameObject:
   - component: {fileID: 1147556739}
   - component: {fileID: 1147556744}
   - component: {fileID: 1147556743}
-  - component: {fileID: 1147556742}
   - component: {fileID: 1147556741}
   - component: {fileID: 1147556745}
+  - component: {fileID: 1147556747}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -1249,22 +1251,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ca302ff4f31426448dae15b158a7817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishInputHandler
---- !u!114 &1147556742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1147556738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c505b48aa26e753478f54b6e9764dfee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FishRacingFish
-  acceleration: 10
-  turning: 1
-  drift: 0.5
-  movespeed: 0
 --- !u!50 &1147556743
 Rigidbody2D:
   serializedVersion: 5
@@ -1280,7 +1266,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.1
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1290,7 +1276,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &1147556744
 CircleCollider2D:
@@ -1340,6 +1326,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e688190bc353eb4581401635b1c12fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerKill
+  onSceneTransitionReady: {fileID: 11400000, guid: dcee5760886724a3ebb702ae5952a922, type: 2}
+--- !u!114 &1147556747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147556738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 544c895360d6c0e4d884a204a117e689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FishRacingFishMouse
+  moveSpeed: 10
+  smoothTime: 0.3
+  mindistance: 1
+  maxTurnSpeed: 10000
 --- !u!1 &1248322643
 GameObject:
   m_ObjectHideFlags: 0
