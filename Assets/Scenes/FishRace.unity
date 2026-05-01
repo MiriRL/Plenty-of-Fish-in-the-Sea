@@ -666,7 +666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -420, y: 83}
+  m_AnchoredPosition: {x: -376, y: 83}
   m_SizeDelta: {x: 200, y: 62.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &526475444
@@ -755,7 +755,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -43.948944, w: -182.88364}
+  m_margin: {x: 0, y: 0, z: -10.988358, w: -182.88364}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1155,7 +1155,6 @@ GameObject:
   - component: {fileID: 1147556739}
   - component: {fileID: 1147556744}
   - component: {fileID: 1147556743}
-  - component: {fileID: 1147556741}
   - component: {fileID: 1147556745}
   - component: {fileID: 1147556747}
   m_Layer: 6
@@ -1239,18 +1238,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1147556741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1147556738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ca302ff4f31426448dae15b158a7817, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FishInputHandler
 --- !u!50 &1147556743
 Rigidbody2D:
   serializedVersion: 5
