@@ -60,7 +60,15 @@ public class FingeController : MonoBehaviour
             TextMeshProUGUI buttonText = infoButton.GetComponentInChildren<TextMeshProUGUI>();
             Image iconImage = newInfo.GetComponentInChildren<Image>();
             List<Image> heartImages = newInfo.transform.GetChild(2).gameObject.GetComponentsInChildren<Image>().ToList();
-            SetupCharInfo(character, buttonText, heartImages, iconImage);
+            List<Image> hearts = new List<Image>();
+            foreach (Image heart in heartImages)
+            {
+                if (heart.type == Image.Type.Simple)  // Filter out the panel
+                {
+                    hearts.Add(heart);
+                }
+            }
+            SetupCharInfo(character, buttonText, hearts, iconImage);
 
             infoButtons.Add(newInfo);
         }
