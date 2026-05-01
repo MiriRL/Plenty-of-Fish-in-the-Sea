@@ -10,7 +10,7 @@ public class DateManager : MonoBehaviour
     [SerializeField] private CharacterSpriteController characterSpriteController;
     [SerializeField] private Character mom;
     private DialogueManager dialogueManager;
-    private int cumulativeScore;
+    private float cumulativeScore;
     private string minigameSceneName;
     private Character character;
     private CoreManager coreManager;
@@ -35,7 +35,7 @@ public class DateManager : MonoBehaviour
 
         dialogueManager = dialogueCanvas.GetComponent<DialogueManager>();
         characterSpriteController.ChangeCharacter(character);
-        cumulativeScore = 0;
+        cumulativeScore = 0.0f;
         
         StartDialogue();
     }
@@ -76,7 +76,7 @@ public class DateManager : MonoBehaviour
         // Hearts can go up or down by a maximum of two
         UpdateScore(coreManager.minigameScore + coreManager.dialogueScore);
         
-        int newHearts = character.hearts + cumulativeScore;
+        int newHearts = (int) (character.hearts + cumulativeScore);
         if (newHearts > 3) { newHearts = 3; }
         if (newHearts < 0 ) { newHearts = 0; }
         character.hearts = newHearts;
@@ -122,7 +122,7 @@ public class DateManager : MonoBehaviour
         }
     }
 
-    private void UpdateScore(int score)
+    private void UpdateScore(float score)
     {
         // Keeps the score from going up or down more than 2 points at a time
         if (score > 2) { score = 2; }

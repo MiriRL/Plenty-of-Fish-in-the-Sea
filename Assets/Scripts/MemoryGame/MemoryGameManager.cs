@@ -134,15 +134,32 @@ public class MemoryGameManager : MonoBehaviour
             b.ShowPanel();
             if(matchCount>= spritePairs.Count / 2)
             {
+                int score = 16 - turnCount;
+                if (score < 0)
+                {
+                    score = 0;
+                }
+
+                float scaledScore;
+                if (score >= 0 & score < 4)
+                {
+                    scaledScore = 0.0f;
+                }
+                else if (score >= 4 & score < 8)
+                {
+                    scaledScore = 0.5f;
+                }
+                else
+                {
+                    scaledScore = 1.0f;
+                }
                 //end game
-                scoreText.text = "Score: " + turnCount;
+                scoreText.text = "Score: " + score;
                 overlayPanel.SetActive(true);
                 coreManager.UpdateKnownCharacters(salmon);
-                coreManager.minigameScore = turnCount;
-                onSceneReady.Raise();
-                //onscenetransition
-                //coremanager loadnewscene - go back to home scene
-                
+
+                coreManager.minigameScore = scaledScore;
+                onSceneReady.Raise();    
             }
         }
         else
