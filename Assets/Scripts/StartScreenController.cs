@@ -1,12 +1,23 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class StartScreenController : MonoBehaviour
 {
     public GameEvent OnSceneReady;
+    public List<Character> allCharacters;
     private CoreManager core;
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        // Set character hearts to zero
+        foreach (Character character in allCharacters)
+        {
+            character.hearts = 0;
+        }
+    }
+
 
     public void OnStartClick()
     {

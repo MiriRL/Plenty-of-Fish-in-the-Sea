@@ -17,7 +17,7 @@ public class CoreManager : MonoBehaviour
     // Game State
     private List<Character> knownChars = new List<Character>();
     [NonSerialized] public Character currentCharacter;
-    [NonSerialized] public int minigameScore;
+    [NonSerialized] public float minigameScore;
     [NonSerialized] public int dialogueScore;
     [NonSerialized] public bool hasPlayedMinigame;
     
