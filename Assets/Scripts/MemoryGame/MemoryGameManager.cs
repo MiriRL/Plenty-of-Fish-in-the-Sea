@@ -134,32 +134,15 @@ public class MemoryGameManager : MonoBehaviour
             b.ShowPanel();
             if(matchCount>= spritePairs.Count / 2)
             {
-                int score = 16 - turnCount;
-                if (score < 0)
-                {
-                    score = 0;
-                }
 
-                float scaledScore;
-                if (score >= 0 & score < 4)
-                {
-                    scaledScore = 0.0f;
-                }
-                else if (score >= 4 & score < 8)
-                {
-                    scaledScore = 0.5f;
-                }
-                else
-                {
-                    scaledScore = 1.0f;
-                }
+                float scaledScore = HandleScore();
+                
                 //end game
-                scoreText.text = "Score: " + score;
                 overlayPanel.SetActive(true);
                 coreManager.UpdateKnownCharacters(salmon);
 
                 coreManager.minigameScore = scaledScore;
-                onSceneReady.Raise();    
+                onSceneReady.Raise();
             }
         }
         else
@@ -167,6 +150,33 @@ public class MemoryGameManager : MonoBehaviour
             a.Hide();
             b.Hide();
         }
+    }
+
+    // calculate display score and core score
+    private float HandleScore()
+    {
+        int score = 16 - turnCount;
+        if (score < 0)
+        {
+                    score = 0;
+        }
+        scoreText.text = "Score: " + score;
+
+        float scaledScore;
+        if (score >= 0 & score < 4)
+        {
+            scaledScore = 0.0f;
+        }
+        else if (score >= 4 & score < 8)
+        {
+            scaledScore = 0.5f;
+        }
+        else
+        {
+            scaledScore = 1.0f;
+        }
+
+        return scaledScore;
     }
 
     public void EndGame()
