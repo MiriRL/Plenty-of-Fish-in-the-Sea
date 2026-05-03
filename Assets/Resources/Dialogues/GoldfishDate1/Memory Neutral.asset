@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
+  m_Name: Memory Neutral
+  m_EditorClassIdentifier: Assembly-CSharp::Sentence
+  text: Hey, not bad! I think you could be pretty good at this with some practice!
+  nextSentence: {fileID: 0}
+  options:
+  - text: "Thanks! I'd love the chance to try again\u2014maybe on a second date?"
+    nextSentence: {fileID: 11400000, guid: e13ffd1adbccf4d63af99d9e67fbf39f, type: 2}
+    score: 1
+    emotion: excited
+    onOptionSelected: {fileID: 0}
+  - text: Thank you! I had fun with it!
+    nextSentence: {fileID: 11400000, guid: cf7be35c6f93d4b55bc6f180c938962f, type: 2}
+    score: 0
+    emotion: happy
+    onOptionSelected: {fileID: 0}
+  - text: I don't think this is the game for me.
+    nextSentence: {fileID: 11400000, guid: b84f219bc1d3a432b9a82cbf2f1d887a, type: 2}
+    score: 0
+    emotion: happy
+    onOptionSelected: {fileID: 0}
