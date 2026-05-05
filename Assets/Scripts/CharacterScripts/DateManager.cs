@@ -9,6 +9,7 @@ public class DateManager : MonoBehaviour
     [SerializeField] private Canvas dialogueCanvas;
     [SerializeField] private CharacterSpriteController characterSpriteController;
     [SerializeField] private Character mom;
+    [SerializeField] private Character salmon;
     private DialogueManager dialogueManager;
     private float cumulativeScore;
     private string minigameSceneName;
@@ -69,7 +70,9 @@ public class DateManager : MonoBehaviour
     {
         if (!coreManager.hasPlayedMinigame)
         {
-            // Only run this after the minigame has played
+            // Only do everything else after the minigame has played
+            // Otherwise it's an early failure and we return to the home screen
+            FailDate();
             return;
         }
         // Update character's hearts based on score
@@ -82,10 +85,8 @@ public class DateManager : MonoBehaviour
         character.hearts = newHearts;
 
         // Mom also gets another heart
-        if (mom.hearts < mom.GetNumDialogues())
-        {    
-            mom.hearts += 1;
-        }
+        MomScoreUpdate();
+        
         
         OnSceneTransitionReady.Raise();
         coreManager.LoadNewScene("HomeScreen");
@@ -99,7 +100,8 @@ public class DateManager : MonoBehaviour
     public void StartMinigame()
     {
         // Save the dialogue score in the core
-        coreManager.dialogueScore = dialogueManager.GetCurrentScore();
+        coreManager.dialogueScore = ((float) dialogueManager.GetCurrentScore()) / 2.0f;
+        Debug.Log("Dialogue final score: " + coreManager.dialogueScore);
         coreManager.hasPlayedMinigame = true;
         // Load the minigame scene additive
         switch (coreManager.currentCharacter.name)
@@ -122,8 +124,26 @@ public class DateManager : MonoBehaviour
         }
     }
 
+    private void FailDate()
+    {
+        MomScoreUpdate();  // Mom still updates bc you finished a date
+        coreManager.UpdateKnownCharacters(salmon);  // Still update known chars even if you didn't play the minigame
+        OnSceneTransitionReady.Raise();
+        coreManager.LoadNewScene("HomeScreen");
+        // Don't update character score bc score is zero?
+    }
+
+    private void MomScoreUpdate()
+    {
+        if (mom.hearts < mom.GetNumDialogues())
+        {    
+            mom.hearts += 1;
+        }
+    }
+
     private void UpdateScore(float score)
     {
+        Debug.Log("Base score: " + score);
         // Keeps the score from going up or down more than 2 points at a time
         if (score > 2) { score = 2; }
         if (score < -2 ) { score = -2; }

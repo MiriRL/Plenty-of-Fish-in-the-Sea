@@ -54,12 +54,6 @@ public class MenuManager : MonoBehaviour
         homeScreen.SetActive(false);
     }
 
-    public void OpenDebugScene()
-    {
-        OnSceneReady.Raise();
-        core.LoadNewScene("DebugSceneMenu");
-    }
-
     private CoreManager GetCoreManager()
     {
         Scene coreScene = SceneManager.GetSceneByName("CoreScene");

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTree
   character: {fileID: 11400000, guid: a2a0b282e5eca46d989af9aab2002585, type: 2}
   startingSentence: {fileID: 11400000, guid: 363edf50a57fc4d2fb9d09967cbfc927, type: 2}
-  requiredHearts: 0
+  requiredHearts: 1
   isMinigameDialogue: 1

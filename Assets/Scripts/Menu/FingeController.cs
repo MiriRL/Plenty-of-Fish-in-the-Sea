@@ -37,14 +37,20 @@ public class FingeController : MonoBehaviour
         {
             Debug.LogError("No core manager found.");
         }
+        Debug.Log("loaded core");
+        
         OpenMainScreen();
     }
 
     public void OpenMainScreen()
     {
+        Debug.Log("open main");
+        if (coreManager == null || mainScreen.activeSelf == true)
+        {
+            return;  // If it's already open or the first time opening we don't need to call this func twice
+        }
         infoScreen.SetActive(false);
         
-
         foreach (Character character in coreManager.GetKnownCharacters())
         {
             GameObject newInfo = Instantiate(characterInfo, mainScreen.transform);
@@ -79,13 +85,26 @@ public class FingeController : MonoBehaviour
 
     public void OpenCharacterScreen(Character character)
     {
-        mainScreen.SetActive(false);
+        CloseMainScreen();
         SetupCharInfo(character, infoScreenNameText, infoScreenHearts, infoScreenIcon);
         infoScreenDescription.text = character.GetCurrentFingeDescription();
         infoScreen.GetComponentInChildren<Button>().onClick.AddListener(() => SaveChosenCharacter(character));
+        
         infoScreen.SetActive(true);
     }
 
+    public void CloseMainScreen()
+    {
+        // Clear info buttons
+        for (int i = infoButtons.Count - 1; i >= 0; i--)
+        {
+            Destroy(infoButtons[i]);
+        }
+        infoButtons = new List<GameObject>();
+
+        mainScreen.SetActive(false);
+    }
+    
     private void SaveChosenCharacter(Character character)
     {
         Debug.Log("Character saved");

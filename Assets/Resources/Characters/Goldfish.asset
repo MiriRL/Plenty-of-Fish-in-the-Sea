@@ -33,11 +33,13 @@ MonoBehaviour:
   - emotionName: sad
     emotionSprite: {fileID: 2358552735186354968, guid: af9b076c9d3f249ffbee20818c377c4b, type: 3}
   currentEmotion:
-    emotionName: excited
-    emotionSprite: {fileID: -4028108236679445655, guid: f3596300bd48c48b0aa9457c0c8fc8c4, type: 3}
+    emotionName: sad
+    emotionSprite: {fileID: 2358552735186354968, guid: af9b076c9d3f249ffbee20818c377c4b, type: 3}
   dialogues:
   - {fileID: 11400000, guid: 03a05e95d3eb84697a90ab16840ff138, type: 2}
-  - {fileID: 11400000, guid: b30354e3dd1e947d68f98a8609a6f683, type: 2}
+  - {fileID: 11400000, guid: 3989b56a77cca4e41be2b9f0f217bf4d, type: 2}
+  - {fileID: 11400000, guid: b7ee65cde8a4c45ab83a1960ad95b10a, type: 2}
+  - {fileID: 11400000, guid: bd28f574056524aa9808920a1c21f9e0, type: 2}
   fingeDescriptions:
   - associatedHearts: 0
     availableInfo: 'hiya! I love meeting new people and chatting for hours! '

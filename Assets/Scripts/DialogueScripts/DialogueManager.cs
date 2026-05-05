@@ -56,9 +56,30 @@ public class DialogueManager : MonoBehaviour
         HideOptions();
         string sentence = currentSentence.text;
 
+        // Play the minigame based on text
         if (sentence == "Plays the game" || sentence == "Plays the racing game")
         {
             OnStartMinigame.Raise();
+            return;
+        }
+
+        // Adjusts score based on text
+        if (sentence == "+0 Hearts")
+        {
+            currScore = 0;
+            EndDialogue();
+            return;
+        }
+        else if (sentence == "+1 Heart")
+        {
+            currScore = 2;
+            EndDialogue();
+            return;
+        }
+        else if (sentence == "+1/2 Heart")
+        {
+            currScore = 1;
+            EndDialogue();
             return;
         }
 
@@ -148,6 +169,7 @@ public class DialogueManager : MonoBehaviour
         if (option.score != 0)
         {
             currScore += option.score;
+            Debug.Log("Score: " + option.score + " , Curr Score: " + currScore);
         }
         DisplaySentence();
     }
