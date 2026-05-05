@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Character
   characterName: Goldfish
   characterIcon: {fileID: 3643878606885920179, guid: 916c09a3c894b41fc94568e4cebe793f, type: 3}
-  hearts: 2
+  hearts: 0
   emotions:
   - emotionName: talking
-    emotionSprite: {fileID: -1258385783094681400, guid: 6f9784ea26990472a9809bbaa7b749c6, type: 3}
+    emotionSprite: {fileID: -760365538935216744, guid: 6f9784ea26990472a9809bbaa7b749c6, type: 3}
   - emotionName: crying
     emotionSprite: {fileID: 5900121124419885490, guid: b8bb50a6f50c848a4bd705235f26f2da, type: 3}
   - emotionName: dead
