@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b343b152a8a430eb3bda397fcbc60f, type: 3}
   m_Name: SalmonDate1-3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTree
-  character: {fileID: 0}
-  startingSentence: {fileID: 0}
+  character: {fileID: 11400000, guid: 20cc7ad01818f47158869dd306a76a64, type: 2}
+  startingSentence: {fileID: 11400000, guid: 0a4dd01a026524237abf1b88d40669ea, type: 2}
   requiredHearts: 0
-  isMinigameDialogue: 0
+  isMinigameDialogue: 1

@@ -37,7 +37,9 @@ MonoBehaviour:
     emotionSprite: {fileID: 8649880369265571879, guid: 6c65caa8123404b59a21c2c6acf29003, type: 3}
   dialogues:
   - {fileID: 11400000, guid: db1b3f714ddca4c878dec78b38c84ff6, type: 2}
-  - {fileID: 11400000, guid: b30354e3dd1e947d68f98a8609a6f683, type: 2}
+  - {fileID: 11400000, guid: a48fb52ea88984918b706d532fd63552, type: 2}
+  - {fileID: 11400000, guid: 8c5507b7f2eeb47968464d98befb1220, type: 2}
+  - {fileID: 11400000, guid: 10fc21a16e3ad480a96b7816cd3f9c52, type: 2}
   fingeDescriptions:
   - associatedHearts: 0
     availableInfo: This is Salmon.
