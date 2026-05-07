@@ -135,7 +135,7 @@ public class DateManager : MonoBehaviour
 
     private void MomScoreUpdate()
     {
-        if (mom.hearts < mom.GetNumDialogues())
+        if (mom.hearts < 3)
         {    
             mom.hearts += 1;
         }

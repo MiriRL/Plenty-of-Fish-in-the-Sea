@@ -40,6 +40,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a48fb52ea88984918b706d532fd63552, type: 2}
   - {fileID: 11400000, guid: 8c5507b7f2eeb47968464d98befb1220, type: 2}
   - {fileID: 11400000, guid: 10fc21a16e3ad480a96b7816cd3f9c52, type: 2}
+  - {fileID: 11400000, guid: 73c0d9d642c4d4510a3364b85450d6b7, type: 2}
+  - {fileID: 11400000, guid: 7dbbcc87aac7241a989124d9020c5966, type: 2}
+  - {fileID: 11400000, guid: f6f5976b8a10f4d2c9f828380cef08a0, type: 2}
   fingeDescriptions:
   - associatedHearts: 0
     availableInfo: This is Salmon.

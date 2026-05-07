@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Character
   characterName: Goldfish
   characterIcon: {fileID: 3643878606885920179, guid: 916c09a3c894b41fc94568e4cebe793f, type: 3}
-  hearts: 0
+  hearts: 2
   emotions:
   - emotionName: talking
     emotionSprite: {fileID: -760365538935216744, guid: 6f9784ea26990472a9809bbaa7b749c6, type: 3}
@@ -33,13 +33,16 @@ MonoBehaviour:
   - emotionName: sad
     emotionSprite: {fileID: 2358552735186354968, guid: af9b076c9d3f249ffbee20818c377c4b, type: 3}
   currentEmotion:
-    emotionName: sad
-    emotionSprite: {fileID: 2358552735186354968, guid: af9b076c9d3f249ffbee20818c377c4b, type: 3}
+    emotionName: happy
+    emotionSprite: {fileID: -962012111571392253, guid: 40199b7ca5ecb46eca921a72e724504b, type: 3}
   dialogues:
   - {fileID: 11400000, guid: 03a05e95d3eb84697a90ab16840ff138, type: 2}
   - {fileID: 11400000, guid: 3989b56a77cca4e41be2b9f0f217bf4d, type: 2}
   - {fileID: 11400000, guid: b7ee65cde8a4c45ab83a1960ad95b10a, type: 2}
   - {fileID: 11400000, guid: bd28f574056524aa9808920a1c21f9e0, type: 2}
+  - {fileID: 11400000, guid: 73c0d9d642c4d4510a3364b85450d6b7, type: 2}
+  - {fileID: 11400000, guid: 7dbbcc87aac7241a989124d9020c5966, type: 2}
+  - {fileID: 11400000, guid: f6f5976b8a10f4d2c9f828380cef08a0, type: 2}
   fingeDescriptions:
   - associatedHearts: 0
     availableInfo: 'hiya! I love meeting new people and chatting for hours! '
