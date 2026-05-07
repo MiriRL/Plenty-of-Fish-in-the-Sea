@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
   m_Name: Okay
   m_EditorClassIdentifier: Assembly-CSharp::Sentence
-  text: text
-  nextSentence: {fileID: 0}
+  text: "That's okay! This was nice\u2014I'll catch you around!"
+  nextSentence: {fileID: 11400000, guid: 0a4dd01a026524237abf1b88d40669ea, type: 2}
   options: []

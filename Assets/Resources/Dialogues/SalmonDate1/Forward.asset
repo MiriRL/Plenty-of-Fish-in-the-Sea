@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
   m_Name: Forward
   m_EditorClassIdentifier: Assembly-CSharp::Sentence
-  text: text
-  nextSentence: {fileID: 0}
+  text: Great! I look forward to it!
+  nextSentence: {fileID: 11400000, guid: 10f10f7c19e3c4db7a08d37f1c03d73e, type: 2}
   options: []

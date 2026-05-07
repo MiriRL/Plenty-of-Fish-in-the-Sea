@@ -12,6 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
   m_Name: Brag
   m_EditorClassIdentifier: Assembly-CSharp::Sentence
-  text: text
+  text: Alright, haha, don't brag too much! Would you let me show you up another
+    time!
   nextSentence: {fileID: 0}
-  options: []
+  options:
+  - text: Yes please!
+    nextSentence: {fileID: 11400000, guid: 03de396e0c589420aae2b00c51ac0126, type: 2}
+    score: 1
+    emotion: glamourous
+    onOptionSelected: {fileID: 0}
+  - text: This was fun, but I think I'm good.
+    nextSentence: {fileID: 11400000, guid: df6def20e147041acbff82a98e5d0fd3, type: 2}
+    score: 0
+    emotion: relaxed
+    onOptionSelected: {fileID: 0}

@@ -12,6 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
   m_Name: Race Neutral
   m_EditorClassIdentifier: Assembly-CSharp::Sentence
-  text: :/
+  text: Not bad! I could see you getting to be pretty quick!
   nextSentence: {fileID: 0}
-  options: []
+  options:
+  - text: Thanks! I'm gonna be the best in the world!
+    nextSentence: {fileID: 11400000, guid: f5fbbaedb76624e96bdd3fac58acaea9, type: 2}
+    score: 0
+    emotion: happy
+    onOptionSelected: {fileID: 0}
+  - text: Aww, thank you! Hopefully I can get better!
+    nextSentence: {fileID: 11400000, guid: f5dc08881f930492bbd2522f60ebeae0, type: 2}
+    score: 0
+    emotion: nervous
+    onOptionSelected: {fileID: 0}

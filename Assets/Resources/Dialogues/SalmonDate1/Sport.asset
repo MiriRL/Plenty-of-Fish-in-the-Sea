@@ -12,6 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414b9583795004b8c99231db161965bd, type: 3}
   m_Name: Sport
   m_EditorClassIdentifier: Assembly-CSharp::Sentence
-  text: text
+  text: Well, at least you're a good sport! Would you this again sometime?
   nextSentence: {fileID: 0}
-  options: []
+  options:
+  - text: I'm game!
+    nextSentence: {fileID: 11400000, guid: 03c5368cb9f294ecaabc11e172a8eefd, type: 2}
+    score: 0
+    emotion: happy
+    onOptionSelected: {fileID: 0}
+  - text: I think I'll pass.
+    nextSentence: {fileID: 11400000, guid: df6def20e147041acbff82a98e5d0fd3, type: 2}
+    score: 0
+    emotion: relaxed
+    onOptionSelected: {fileID: 0}
