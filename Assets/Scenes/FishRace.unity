@@ -799,7 +799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishRaceTimer
   timeRemaining: 15
-  timeRunning: 0
+  timeRunning: 1
   timeText: {fileID: 366983838}
   onSceneTransitionReady: {fileID: 11400000, guid: dcee5760886724a3ebb702ae5952a922, type: 2}
 --- !u!4 &722546842
