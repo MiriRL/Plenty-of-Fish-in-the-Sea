@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -24,6 +25,8 @@ public class FishRacingFishMouse : MonoBehaviour
     {
         Vector3 mousePositionRel = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
+        if(transform.position.x<3.5f && transform.position.x>-3.5f  && transform.position.y<4.5f &&  transform.position.y>-4.5f){
+        Debug.Log(mousePositionRel.y);
         Vector2 direction = mousePositionRel - transform.position;
         float targetAngle = Vector2.SignedAngle(Vector2.up, direction);
         //transform.eulerAngles = new Vector3 (0, 0, angle);
@@ -31,9 +34,10 @@ public class FishRacingFishMouse : MonoBehaviour
         angle = Mathf.SmoothDampAngle(angle, targetAngle, ref currentVelocityAngle, smoothTime, maxTurnSpeed);
         transform.eulerAngles = new Vector3(0, 0, angle);
         
-
+    
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition += ((Vector2)transform.position - mousePosition).normalized * mindistance;
         transform.position = Vector2.SmoothDamp(transform.position, mousePosition, ref currentVelocity, smoothTime, moveSpeed);
+        }
     }
 }

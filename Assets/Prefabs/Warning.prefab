@@ -104,3 +104,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87c6366e78f9d5f4aa085392b4132be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WarningController
+  interval: 0.5
